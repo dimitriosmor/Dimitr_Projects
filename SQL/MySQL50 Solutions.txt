@@ -1,0 +1,417 @@
+
+
+1757. Recyclabe and Low fat product
+# Write your MySQL query statement below
+Select product_id  
+FROM Products 
+WHERE low_fats = "Y" AND recyclable ="Y";
+
+
+584. Find Customer Referee
+# Write your MySQL query statement below
+SELECT name
+FROM Customer 
+WHERE referee_id !=2 or referee_id IS NULL;
+
+595.Big Countries
+# Write your MySQL query statement below
+SELECT name, population, area
+FROM World 
+WHERE area >=  3000000 OR population>=  25000000; 
+
+
+1148. Article Views I
+# Write your MySQL query statement below
+SELECT DISTINCT author_id AS id
+FROM Views 
+WHERE author_id = viewer_id 
+ORDER BY author_id;
+
+
+
+1683. Invalid Tweets
+
+# Write your MySQL query statement below
+SELECT tweet_id 
+FROM Tweets 
+WHERE LENGTH(content)>= 16;
+
+
+
+1378. Replace Employee ID With The Unique Identifier
+# Write your MySQL query statement below
+SELECT unique_id, name
+FROM  Employees
+LEFT JOIN EmployeeUNI ON Employees.id = EmployeeUNI.id ; 
+
+ 
+1068.Product Sales Analysis I
+# Write your MySQL query statement below
+SELECT product_name, year, price
+FROM Product 
+LEFT JOIN Sales ON Sales.product_id = Product.product_id
+WHERE price IS NOT NULL; 
+
+1581. Customer Who Visited but Did Not Make Any Transactions
+# Write your MySQL query statement below
+
+SELECT customer_id,COUNT(* ) AS count_no_trans 
+FROM Visits
+LEFT JOIN Transactions ON Visits.visit_id = Transactions.visit_id
+WHERE amount IS NULL
+GROUP BY customer_id;
+
+
+197. Rising Temperature
+# Write your MySQL query statement below
+SELECT id
+FROM (
+    SELECT Weather.id,temperature, pd,recordDate, db, DATEDIFF(recordDate,db)AS dd
+    FROM Weather
+    LEFT JOIN (SELECT id, LAG(temperature ,1) OVER (ORDER BY recordDate  ) AS pd, LAG(recordDate ,1) OVER (ORDER BY recordDate) AS db
+                FROM Weather)AS hot ON Weather.id= hot.id
+        )as hot2
+    WHERE temperature>pd AND dd=1
+ORDER BY recordDate;
+
+
+1661. Average Time of Process per Machine
+# Write your MySQL query statement below
+    
+
+SELECT strt_tbl.machine_id, round( (nd-strt)/strt_tbl.n,3) AS processing_time  
+FROM (SELECT machine_id, COUNT(DISTINCT process_id) AS n , activity_type, SUM( timestamp ) AS strt
+        FROM Activity
+        WHERE activity_type ="start"
+        GROUP BY machine_id,activity_type ) strt_tbl 
+
+LEFT JOIN (
+ SELECT machine_id, activity_type, SUM( timestamp ) AS nd
+        FROM Activity
+        WHERE activity_type ="end"
+        GROUP BY machine_id,activity_type ) end_tbl ON  strt_tbl.machine_id =end_tbl.machine_id
+       
+
+
+
+577. Employee Bonus
+# Write your MySQL query statement below
+SELECT name, bonus 
+FROM Employee
+LEFT JOIN Bonus ON Employee.empId = Bonus.empId       
+WHERE bonus<1000 OR bonus IS NULL;
+
+
+1280. Students and Examinations
+SELECT Students.student_id , student_name, subject_name 
+FROM Students
+LEFT JOIN (
+    SELECT student_id , Subjects.subject_name
+    FROM Subjects 
+    LEFT JOIN Examinations ON Subjects.subject_name = Examinations.subject_name 
+)clas ON Students.student_id  = clas.student_id 
+
+GROUP BY student_name, subject_name  
+ORDER BY Students.student_id
+
+
+570. Managers with at least 5 Direct Reports
+
+# Write your MySQL query statement below
+
+SELECT name
+FROM Employee
+INNER JOIN(SELECT managerId
+	 FROM(SELECT managerId, COUNT(managerId)AS mang
+		 FROM Employee
+		 GROYP BY managerId) AS mangers
+WHERE mang>=5) AS  mgid ON mgid.managerId=id;
+
+
+1934. Confirmation Rate
+# Write your MySQL query statement below
+
+SELECT Signups.user_id, IFNULL(ROUND(c_action/t_action,2),0)AS confirmation_rateFROM SignupsLEFT JOIN (            SELECT user_id, COUNT(action) as c_action                FROM Confirmations                WHERE action="confirmed"                GROUP BY user_id)AS atbl ON atbl.user_id= Signups.user_idLEFT JOIN(SELECT user_id, COUNT(user_id) as t_action            FROM Confirmations            GROUP BY user_id) AS btbl ON btbl.user_id= Signups.user_id
+GROUP BY user_id
+
+
+
+1251 AVERAGAE SELLING PRICE
+# Write your MySQL query statement below
+
+SELECT Prices.product_id ,IFNULL(average_price,0) AS  average_priceFROM Prices LEFT JOIN ( SELECT product_id, IFNULL(ROUND(SUM(t_inc)/t_usold ,2),0) AS average_price             FROM (            SELECT UnitsSold.product_id, ROUND(SUM(price*units),2 ) as t_inc, t_usold            FROM Prices            LEFT JOIN UnitsSold ON UnitsSold.product_id = Prices.product_id            CROSS JOIN( SELECT product_id , IFNULL(SUM(units ),0) AS t_usold            FROM UnitsSold             GROUP BY product_id) AS tu ON  tu.product_id = Prices.product_id            WHERE purchase_date BETWEEN start_date AND end_date               GROUP BY UnitsSold.product_id  ) AS avg_calc            GROUP BY product_id)AS fin ON fin.product_id = Prices.product_idGROUP BY Prices.product_id
+
+
+
+
+1633. Percentage of Users Attended a Contest
+
+# Write your MySQL query statement below
+SELECT contest_id, ROUND( (COUNT(*)/tuser)*100,2) AS percentage FROM Register CROSS JOIN (SELECT user_id, COUNT(*) AS tuser            FROM Users   ) AS ttluserGROUP BY contest_id ORDER BY percentage DESC, contest_id ASC
+
+
+
+
+1193 monthly transactions1 
+
+SELECT  DATE_FORMAT(trans_date, '%Y-%m') AS month,         country,          IFNULL(COUNT(*),0) AS trans_count,         IFNULL(COUNT(CASE WHEN state='approved' THEN 1 END) ,0) AS approved_count,         IFNULL(SUM(amount),0) AS trans_total_amount,          IFNULL(SUM(CASE WHEN state='approved' THEN amount ELSE 0 END ) ,0) AS approved_total_amountFROM TransactionsGROUP BY country, MONTH (trans_date), YEAR(trans_date) 
+1174 IMMEDIATE FOOD DELIVERY
+SELECT ROUND( (COUNT(*)/AVG(cdcid))*100, 2) AS immediate_percentage FROM(SELECT MIN(order_date) AS minod, MIN(customer_pref_delivery_date) AS mincpdd,  cdcid                 FROM DeliveryCROSS JOIN (            SELECT COUNT( DISTINCT customer_id) AS cdcid            FROM Delivery)AS cidGROUP BY customer_id ) AS minat         WHERE minod=mincpdd
+
+
+
+
+550 GAMEPLAY ANALYSIS
+
+SELECT IFNULL(ROUND(COUNT(*)/mxp,2),0) AS fraction FROM ActivityLEFT JOIN (        SELECT player_id, MIN(event_date) AS mevd        FROM Activity        GROUP BY player_id) AS mevdm on mevdm.player_id = Activity.player_id CROSS JOIN (SELECT COUNT(DISTINCT player_id) AS mxp            FROM Activity) AS mxpc   WHERE event_date != mevd AND DATEDIFF(event_date,mevd )= 1
+
+
+
+2356 Number of Unique Subjects Taught by Each Teacher
+
+# Write your MySQL query statement below
+
+SELECT teacher_id, COUNT(DISTINCT subject_id) AS cnt FROM TeacherGROUP BY teacher_id 
+
+
+
+
+1141.User Activity for the Past 30 Days I
+
+# Write your MySQL query statement below
+
+SELECT activity_date AS day, COUNT(DISTINCT user_id)AS active_users FROM ActivityWHERE activity_date BETWEEN DATE_ADD("2019-07-27",INTERVAL -29 DAY) AND "2019-07-27"GROUP BY activity_dateORDER BY activity_date 
+1070 PRODUCT SALESIII
+# Write your MySQL query statement belowSELECT Sales.product_id, year1 AS first_year, Sales.quantity, Sales.price       FROM SalesINNER JOIN (        SELECT product_id, MIN(year) AS year1         FROM Sales        GROUP BY product_id) as y1 ON y1.year1 = Sales.year AND  y1.product_id = Sales.product_id 
+
+
+
+
+
+596.Classes With at Least 5 Students
+
+SELECT classFROM (    SELECT COUNT(DISTINCT student ) AS std,class    FROM Courses    GROUP BY class )AS spcWHERE  std>4
+
+
+
+
+1729.Find Followers Count
+
+# Write your MySQL query statement below
+
+SELECT user_id , COUNT(follower_id ) AS followers_countFROM FollowersGROUP BY user_idORDER BY user_id ASC
+
+
+
+
+619.Biggest Single Number
+
+# Write your MySQL query statement below
+
+SELECT MAX(MyNumbers.num) AS num FROM MyNumbersINNER JOIN (            SELECT num, COUNT(*)AS cnt             FROM MyNumbers            GROUP BY num) AS CNT1 ON   CNT1.num = MyNumbers.numWHERE cnt = 1
+
+
+
+
+1045.Customers Who Bought All Products
+
+# Write your MySQL query statement below
+
+SELECT customer_id FROM (    SELECT customer_id, COUNT(DISTINCT product_key) AS pkpc    FROM Customer    GROUP BY customer_id) AS pkpc1 INNER JOIN (            SELECT COUNT(DISTINCT product_key) AS pk            FROM Product) AS pk1 ON pkpc1.pkpc= pk1.pk
+
+
+
+
+
+1731.The Number of Employees Which Report to Each Employee
+
+# Write your MySQL query statement below
+
+SELECT  Employees.employee_id, Employees.name , reports_count , average_age FROM EmployeesLEFT JOIN(  SELECT rprtt.reports_to , COUNT(*) AS reports_count , ROUND(AVG(age)) AS average_age             FROM Employees            INNER JOIN (                         SELECT DISTINCT reports_to AS reports_to                         FROM  Employees                         WHERE reports_to IS NOT NULL ) AS rprtt ON rprtt.reports_to = Employees.reports_to                        GROUP BY Employees.reports_to) AS cnt ON cnt.reports_to = Employees.employee_id LEFT JOIN( SELECT employee_id, name                    FROM Employees            INNER JOIN (                         SELECT DISTINCT reports_to AS reports_to                         FROM  Employees                         WHERE reports_to IS NOT NULL ) AS rprtt ON rprtt.reports_to = Employees.employee_id                        GROUP BY Employees.employee_id) AS eid ON eid.employee_id = Employees.employee_idWHERE reports_count IS NOT NULLORDER BY  Employees.employee_id
+
+
+
+
+
+1789. Primary Department for Each Employee
+
+# Write your MySQL query statement below
+
+SELECT Employee.employee_id, department_id    FROM EmployeeLEFT JOIN (    SELECT employee_id, COUNT(*)AS cnt    FROM Employee    GROUP BY employee_id) AS cntid ON cntid.employee_id = Employee.employee_idWHERE primary_flag  = 'Y' OR cnt = 1 
+
+
+
+
+
+610.Triangle Judgement
+
+# Write your MySQL query statement below
+
+
+SELECT *, CASE WHEN x+y>z AND z+y>x  AND x+z>y THEN 'Yes' ELSE 'No'END AS  triangle FROM Triangle
+
+
+
+
+
+180.Consecutive Numbers
+
+# Write your MySQL query statement below
+
+SELECT num AS ConsecutiveNums     FROM LogsLEFT JOIN (SELECT id, LAG(num) OVER (ORDER BY id) AS l1            FROM Logs) AS l1l on l1l.id = Logs.idLEFT JOIN (SELECT id, LAG(num,2) OVER (ORDER BY id) AS l2            FROM Logs) AS l2l on l2l.id = Logs.idWHERE num=l1 AND l1=l2GROUP BY ConsecutiveNums
+1164.Product Price at a Given Date
+SELECT pindex AS product_id, IFNULL(new_price,10) AS priceFROM (SELECT product_id AS pindex           FROM Products           GROUP BY product_id ) AS pindex  LEFT JOIN(SELECT product_id, new_price FROM( SELECT Products.product_id , new_price , change_date , mcd1.product_id AS mcdid, mcd            FROM Products            LEFT JOIN (            SELECT product_id, MAX(change_date ) AS mcd            FROM Products            WHERE change_date<= '2019-08-16'             GROUP BY product_id ) AS mcd1 ON mcd1.product_id = Products.product_id AND mcd = change_date) AS hp1where mcd = change_date) AS hp2 ON pindex=hp2.product_id
+
+
+
+
+
+1204.Last Person to Fit in the Bus
+
+# Write your MySQL query statement below
+SELECT person_name FROM QueueINNER JOIN(               SELECT CASE WHEN MAX(running_total)<=1000 THEN MAX(rt.turn) ELSE MAX(mxqt) END AS ovrk            FROM (  SELECT *, SUM(weight ) OVER (ORDER BY turn ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW ) AS running_total                    FROM Queue                                       ORDER BY turn                   ) AS rt               LEFT JOIN ( SELECT turn, MAX(turn) AS mxqt                    FROM Queue   ) AS mxt   ON  mxt.turn = rt.turn                 WHERE running_total <= 1000             ) AS ovk ON ovrk =turn 
+
+
+
+
+
+
+1907.Count Salary Categories
+
+# Write your MySQL query statement below
+
+SELECT     'Low Salary' AS category,    COUNT(CASE WHEN income < 20000 THEN 1 END) AS accounts_countFROM Accounts
+UNION ALL
+SELECT     'Average Salary' AS category,    COUNT(CASE WHEN income BETWEEN 20000 AND 50000 THEN 1 END) AS accounts_countFROM Accounts
+
+UNION ALL
+SELECT     'High Salary' AS category,    COUNT(CASE WHEN income> 50000  THEN 1 END) AS accounts_countFROM Accounts
+
+
+
+
+
+
+1978.Employees Whose Manager Left the Company
+
+SELECT employee_id FROM (SELECT * FROM Employees WHERE salary < 30000) AS t1 WHERE manager_id <> ALL (SELECT employee_id FROM Employees) ORDER BY employee_id
+
+
+
+
+
+
+626. Exchange Seats
+# Write your MySQL query statement below
+
+SELECT id2 AS id, student FROM ( SELECT *, CASE           WHEN id!=mxid AND id MOD 2=1 THEN id+1          WHEN id!=mxid AND id MOD 2=0 THEN id-1          ELSE  id+0 END AS id2    FROM Seat    CROSS JOIN ( SELECT CASE WHEN MAX(id) MOD 2 =1 THEN MAX(id) ELSE 0 END AS mxid FROM Seat) as mxid ) AS mxid2ORDER BY id2 
+
+
+
+
+
+1341. Movie Rating
+# Write your MySQL query statement below
+
+
+(SELECT name   AS results  FROM UsersLEFT JOIN (SELECT *            FROM (        SELECT user_id, COUNT(*) AS mur        FROM MovieRating        GROUP BY user_id ) AS cnt) AS mstur ON  mstur.user_id = Users.user_idCROSS JOIN (SELECT MAX(mur) AS mxmur        FROM ( SELECT user_id, COUNT(*) AS mur        FROM MovieRating        GROUP BY user_id ) AS cnt2 ) AS cnt3WHERE  mur = mxmur ORDER BY name        LIMIT 1 )        UNION ALL(SELECT title    FROM MoviesLEFT JOIN (             SELECT movie_id, AVG( rating) AS avgmr            FROM MovieRating            WHERE MONTH(created_at) = '2' AND YEAR(created_at )= '2020'            GROUP BY movie_id ) AS avgmr1 ON avgmr1.movie_id = Movies.movie_idCROSS JOIN ( SELECT avgmr AS mxavgmr             FROM (            SELECT movie_id, AVG( rating) AS avgmr            FROM MovieRating            WHERE MONTH(created_at) = '2' AND YEAR(created_at )= '2020'            GROUP BY movie_id ) AS avgmr2             ORDER BY avgmr DESC            LIMIT 1 ) mxavgmr1WHERE mxavgmr = avgmr ORDER BY title ASC LIMIT 1) 
+
+
+
+
+
+1321. Restaurant Growth
+# Write your MySQL query statement below
+
+SELECT visited_on, SUM(pdti2) OVER ( ROWS BETWEEN 6 PRECEDING AND CURRENT ROW )  AS amount,   ROUND( SUM(pdti) OVER ( ROWS BETWEEN 6 PRECEDING AND CURRENT ROW ) ,2) AS average_amount         FROM (  SELECT *, SUM(amount/7) AS pdti ,SUM(amount) AS pdti2                FROM Customer                CROSS JOIN( SELECT COUNT(DISTINCT visited_on )-6 AS crows                            FROM Customer ) AS nrows                 GROUP BY visited_on ) AS finstep LIMIT 6, 1000000000000000000
+
+
+
+
+602. Friend Requests II: Who Has the Most Friends
+# Write your MySQL query statement below
+
+SELECT person_id AS id, num FROM (     SELECT *, SUM(fcount ) AS num2
+FROM (            SELECT requester_id AS person_id, COUNT(*) AS fcount            FROM RequestAccepted            GROUP BY requester_id             UNION ALL            SELECT accepter_id  , COUNT(*) AS acount            FROM RequestAccepted            GROUP BY accepter_id  ) AS unofrGROUP BY person_id ) as test
+INNER JOIN(
+SELECT  SUM(fcount ) AS numFROM (            SELECT requester_id AS person_id, COUNT(*) AS fcount            FROM RequestAccepted            GROUP BY requester_id             UNION ALL            SELECT accepter_id  , COUNT(*) AS acount            FROM RequestAccepted            GROUP BY accepter_id  ) AS unofrGROUP BY person_id ORDER BY num desc LIMIT 1 ) AS tst ON tst.num = num2 
+
+
+
+
+585.Investments in 2016
+# Write your MySQL query statement below
+
+SELECT ROUND(SUM(tiv_2016 ),2) AS tiv_2016 FROM InsuranceINNER JOIN (        SELECT Insurance.pid        FROM Insurance        INNER JOIN(                 SELECT tiv_2015, COUNT(*) AS hmny                FROM Insurance                GROUP BY tiv_2015) AS loctpid ON loctpid.tiv_2015  = Insurance.tiv_2015         LEFT JOIN(                 SELECT pid,  COUNT(*) AS smlat                FROM Insurance                GROUP BY lat,lon) AS latid ON latid.pid  = Insurance.pid                 WHERE hmny!=1 AND smlat=1  ) AS fstep ON fstep.pid = Insurance.pid
+
+
+
+
+
+185. Department Top Three Salaries
+
+SELECT dpt.name AS Department, rnked.name AS Employee, rnked.salary AS Salary  FROM(   SELECT *, DENSE_RANK() OVER (PARTITION BY departmentId ORDER BY salary DESC)  AS rnk        FROM Employee) AS rnkedLEFT JOIN ( SELECT *              FROM Department) AS dpt ON dpt.id = rnked.departmentIdWHERE rnk<=3    
+
+
+
+
+
+1667.Fix Names in a Table
+
+SELECT     user_id,    CONCAT(        UPPER(SUBSTRING(name, 1, 1)),        LOWER(SUBSTRING(name, 2, LENGTH(name)))    ) AS nameFROM Users  ORDER BY user_id ASC;
+
+
+
+
+
+1527.Patients With a Condition
+# Write your MySQL query statement below
+
+SELECT *FROM PatientsWHERE conditions   LIKE 'DIAB1_%' OR conditions LIKE '% DIAB1%'
+
+
+
+
+
+196. Delete Duplicate Emails
+
+DELETE PersonFROM Person       LEFT JOIN ( SELECT *, COUNT(*) AS ct, MIN(id) AS mnid                  FROM Person                                   GROUP BY email                 ORDER BY id asc             ) AS hp1 on Person.email = hp1.email and hp1.mnid=Person.idwhere ct IS NULL 
+
+
+
+
+176.Second Highest Salary
+
+SELECT CASE WHEN MAX(rnk)>=2 THEN Employee.salary  ELSE NULL END AS SecondHighestSalary FROM EmployeeLEFT JOIN (            SELECT CASE WHEN MAX(rnk)<2 THEN NULL ELSE salary END AS salary, rnk            FROM ( SELECT *, RANK() OVER (ORDER BY salary DESC ) AS rnk                    FROM Employee                     GROUP BY salary  ) AS hp1                         WHERE rnk=2 )AS hp2 ON hp2.salary = Employee.salary WHERE rnk=2 
+
+
+
+
+
+
+1484.Group Sold Products By The Date
+
+# Write your MySQL query statement below
+
+SELECT sell_date  , COUNT( DISTINCT product) AS num_sold, GROUP_CONCAT(DISTINCT product ORDER BY product ASC  SEPARATOR ',') AS products                     FROM ActivitiesGROUP BY sell_date   
+
+
+
+
+
+1327.List the Products Ordered in a Period
+# Write your MySQL query statement below
+
+SELECT product_name, unitFROM ProductsINNER JOIN (            SELECT *            FROM (    SELECT product_id, order_date , SUM(unit) AS unit                FROM Orders            WHERE MONTH(order_date) = '2' AND YEAR(order_date )= '2020'            GROUP BY product_id) AS hp1            WHERE unit>=100 ) AS hp2 ON hp2.product_id = Products.product_id 
+
+
+
+
+
+
+1517.Find Users With Valid E-Mails
+# Write your MySQL query statement below
+
+SELECT user_id, name, mail FROM (SELECT *, SUBSTRING(mail, 1, flength-lpart) AS ExtractString, SUBSTRING(mail,flength-lpart+1, flength) AS ExtractString2FROM (SELECT *, LENGTH(mail) AS flengthFROM(SELECT *FROM (        SELECT *        FROM (  SELECT *                FROM Users                CROSS JOIN (SELECT LENGTH('@leetcode.com') As lpart                            FROM Users) AS hp3                WHERE mail LIKE '%@leetcode.com' ) AS hp1         WHERE  ASCII(mail) BETWEEN 97 AND 122 OR ASCII(mail) BETWEEN 65 AND 90) AS hp2WHERE mail NOT LIKE '%!%' AND mail  NOT LIKE '%#%' AND mail  NOT LIKE '%$%'  AND mail  NOT LIKE '%^%'  AND mail  NOT LIKE '%&%'  AND mail  NOT LIKE '%*%'  AND mail  NOT LIKE '%*%'  AND mail  NOT LIKE '%(%' AND mail NOT LIKE '%)%' AND mail  NOT LIKE '%+%' AND mail  NOT LIKE '%=%' AND mail  NOT LIKE '%\%%' AND mail  NOT LIKE '.com%' ) AS hp4) AS hp5) AS hp6WHERE ExtractString NOT LIKE '%@%' AND BINARY  ExtractString2='@leetcode.com'GROUP BY  user_id
+
+

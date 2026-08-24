@@ -1,0 +1,2631 @@
+
+RECODE Yparxoun.poly.liges.eykairies.gia.proagogi.stin.ergasia.mou
+    Den.eimai.ikanopoiimenos.me.tis.prosthetes.paroxes.pou.lambano
+    Polloi.apo.tous.kanones.kai.tis.diadikasies.kanoun.ti.sosti.ekte
+    Merikes.fores.aisthanomai.pos.i.douleia.mou.einai.anousia Oi.ayxiseis.einai.poly.spanies
+    O.I.proistamenos.mou.einai.adikos.pros.emena Den.aisthanomai.pos.i.douleia.pou.kano.ektimatai
+    THeoro.oti.prepei.na.ergasto.pio.sklira.sti.douleia.mou.logo.tis
+    Oi.stoxoi.tou.organismou.den.einai.xekatharoi.se.emena
+    Niotho.oti.den.ektimomai.apo.ton.organismo.otan.skeftomai.tin.am
+    O.I.proistamenos.deixnei.elaxisto.endiaferon.gia.ta.aisthimata.t
+    Yparxoun.liges.antamoibes.gia.aytous.pou.douleyoun.edo Exo.poly.megalo.forto.ergasias
+    Syxna.aisthanomai.pos.den.gnorizo.ti.symbainei.ston.organismo
+    Yparxoun.prosthetes.paroxes.pou.den.exoume.eno.tha.eprepe Exo.polli.grafeiokratiki.douleia
+    Den.niotho.oti.oi.prospatheies.mou.antameibontai.opos.tha.eprepe
+    Yparxoun.arketes.diafonies.kai.diamaxes.sti.douleia Ta.ergasiaka.kathikonta.den.exigountai.safos
+    (1=6) (2=5) (3=4) (4=3) (5=2) (6=1).
+EXECUTE.
+
+RECODE Fylo ('Άνδρας'='1') ('Γυναίκα'='2'). 
+EXECUTE. 
+RECODE Topos.Ergasias ('Θεσσαλονίκη και περίχωρα'='2') ('Αθήνα και περίχωρα'='1') ('Υπόλοιπη '+ 
+    'Ελλάδα'='3'). 
+EXECUTE. 
+RECODE Epipedo.Spoudon ('Λύκειο (Γενικό, Επαγγελματικό, Τεχνικό)'='1') ('Πτυχίο Ανώτατης '+ 
+    'Εκπαίδευσης (Πανεπιστήμιο, ΤΕΙ, ΙΕΚ)'='2') ('Μεταπτυχιακό'='3') ('Διδακτορικό'='4'). 
+EXECUTE. 
+
+RECODE Ergasiakos.Klados ('Μεταφορές'='1') ('Οικονομία και Ασφάλειες'='2') ('Βιομηχανία'='3') 
+    ('Ανθρώπινοι Πόροι'='4') ('Λιανικό και Χονδρικό Εμπόριο'='5') ('Εκπαίδευση'='6') ('Φιλοξενία'='7') 
+    ('Ενέργεια'='8') ('Πληροφορική'='9') ('Κτηματομεσητικά και Κατασκευές'='10') ('Εφοδιαστική '+ 
+    'Αλυσίδα (Logistics)'='11') ('Ναυτιλία και Θαλάσσιες Μεταφορές'='12') ('Υγεία'='13') ('Τέχνες'='14') ('Ψυχαγωγία και Μέσα Ενημέρωσης'='15'). 
+EXECUTE. 
+RECODE Ergasiaki.empeiria ('0-3 έτη'='1') ('4-6 έτη'='2') ('7-10 έτη'='3') ('11< έτη'='4') ('>11 '+ 
+    'έτη'='4'). 
+EXECUTE. 
+
+ COMPUTE ALI2.TOTAL.MEAN.SCORE=(O.I.proistamenos.mou.entharrynei.tous.allous.na.ekfrazoun.antith + 
+    O.I.proistamenos.mou.kathodigeitai.stis.praxeis.tou.tis.apo.esot + 
+    O.I.proistamenos.mou.ekfrazei.kathara.tis.idees.kai.tis.skepseis + 
+    O.I.proistamenos.mou.exei.xekathari.epignosi.tis.epidrasis.pou.a + 
+    O.I.proistamenos.mou.analyei.antikeimenika.ta.sxetika.dedomena.p + 
+    O.I.proistamenos.mou.antisteketai.stis.pieseis.na.kanei.pragmata + 
+    O.I.proistamenos.mou.moirazetai.anoixta.plirofories.me.tous.allo + 
+    O.I.proistamenos.mou.deixnei.oti.katanoei.ta.dynata.kai.ta.adyna + 
+    O.I.proistamenos.mou.akouei.prosektika.diaforetikes.apopseis.pri + 
+    O.I.proistamenos.mou.basizetai.stis.basikes.tou.tis.pepoithiseis + 
+    O.I.proistamenos.mou.anagnorizei.ta.lathi.tou.tis.otan.symbainou + 
+    O.I.proistamenos.mou.perigrafei.me.akribeia.ton.tropo.pou.oi.all + 
+    O.I.proistamenos.mou.zita.idees.pou.amfisbitoun.tis.basikes.tou + 
+    O.I.proistamenos.mou.deixnei.synepeia.metaxy.ton.pepoithiseon.to + 
+    O.I.proistamenos.mou.ekfrazei.me.safineia.ti.ennoei + 
+    O.I.proistamenos.mou.zita.anatrofodotisi.gia.na.beltiosei.ton.tr) / 16. 
+EXECUTE. 
+
+COMPUTE TLI.TOTAL.MEAN.SCORE=(O.I.proistamenos.mou.psaxnei.panta.nees.eykairies.gia.ton.organi + 
+    O.I.proistamenos.mou.parousiazei.mia.endiaferousa.eikona.gia.to + 
+    O.I.proistamenos.mou.exei.xekathari.antilipsi.gia.to.pou.kateyth + 
+    O.I.proistamenos.mou.empneei.tous.allous.me.ta.plana.tou.tis.gia + 
+    O.I.proistamenos.mou.katafernei.na.kanei.tous.allous.na.desmeyto + 
+    O.I.proistamenos.mou.igeitai.mesa.apo.tis.praxeis.tou.tis.kai.ox + 
+    O.I.proistamenos.mou.apotelei.ena.kalo.protypo.gia.na.akoloutho + 
+    O.I.proistamenos.mou.igeitai.meso.tou.paradeigmatos + 
+    O.I.proistamenos.mou.entharrynei.ti.synergasia.metaxy.ton.omadon + 
+    O.I.proistamenos.mou.entharrynei.tous.ergazomenous.na.leitourgou + 
+    O.I.proistamenos.mou.parakinei.tin.omada.na.synergazetai.gia.ton + 
+    O.I.proistamenos.mou.kalliergei.omadiko.pneyma.kai.synergatiki.s + 
+    O.I.proistamenos.mou.deixnei.oti.exei.ypsiles.prosdokies.apo.ema + 
+    O.I.proistamenos.mou.epimenei.na.exoume.mono.tin.kalyteri.dynati + 
+    O.I.proistamenos.mou.den.symbibazetai.me.tipota.ligotero.apo.to + 
+    O.I.proistamenos.mou.energei.xoris.na.lambanei.ypopsi.ta.synaist + 
+    O.I.proistamenos.mou.deixnei.sebasmo.gia.ta.prosopika.mou.synais + 
+    O.I.proistamenos.mou.symperiferetai.me.tropo.pou.lambanei.ypopsi + 
+    O.I.proistamenos.mou.me.antimetopizei.xoris.na.lambanei.ypopsi.t + 
+    O.I.proistamenos.mou.me.exei.parakinisei.na.xanaskefto.ton.tropo + 
+    O.I.proistamenos.mou.exei.idees.pou.me.exoun.prokalesei.na.epane + 
+    O.I.proistamenos.mou.me.prokalei.na.skefto.palia.problimata.me.n + 
+    O.I.proistamenos.mou.thetei.erotiseis.pou.me.othoun.na.skefto)/23. 
+EXECUTE.  
+COMPUTE ALI.TOTAL.MEAN.SCORE=(O.I.proistamenos.mou.entharrynei.tous.allous.na.ekfrazoun.antith + 
+    O.I.proistamenos.mou.kathodigeitai.stis.praxeis.tou.tis.apo.esot + 
+    O.I.proistamenos.mou.ekfrazei.kathara.tis.idees.kai.tis.skepseis + 
+    O.I.proistamenos.mou.exei.xekathari.epignosi.tis.epidrasis.pou.a + 
+    O.I.proistamenos.mou.analyei.antikeimenika.ta.sxetika.dedomena.p + 
+    O.I.proistamenos.mou.antisteketai.stis.pieseis.na.kanei.pragmata + 
+    O.I.proistamenos.mou.moirazetai.anoixta.plirofories.me.tous.allo + 
+    O.I.proistamenos.mou.deixnei.oti.katanoei.ta.dynata.kai.ta.adyna + 
+    O.I.proistamenos.mou.akouei.prosektika.diaforetikes.apopseis.pri + 
+    O.I.proistamenos.mou.basizetai.stis.basikes.tou.tis.pepoithiseis + 
+    O.I.proistamenos.mou.perigrafei.me.akribeia.ton.tropo.pou.oi.all + 
+    O.I.proistamenos.mou.zita.idees.pou.amfisbitoun.tis.basikes.tou + 
+    O.I.proistamenos.mou.deixnei.synepeia.metaxy.ton.pepoithiseon.to + 
+    O.I.proistamenos.mou.ekfrazei.me.safineia.ti.ennoei ) / 14. 
+EXECUTE. 
+
+FREQUENCIES VARIABLES=Ilikia 
+  /ORDER=ANALYSIS.
+RECODE Ilikia ('18-24 ετών'='1') ('25-34 ετών'='2') ('35-44 ετών'='3') ('45-54 ετών'='4') 
+    ('55-64 ετών'='5') ('>65 ετών'='6'). 
+EXECUTE.
+
+RECODE Topos.Ergasias (1=1) (2=3) (3=3) INTO Topos.Ergasias2. 
+VARIABLE LABELS  Topos.Ergasias2 'Topos.Ergasias2'. 
+EXECUTE.
+
+COMPUTE Sbscale.Pay=Aisthanomai.oti.ameibomai.dikaia.gia.ti.douleia.pou.kano +
+    Oi.ayxiseis.einai.poly.spanies + Niotho.oti.den.ektimomai.apo.ton.organismo.otan.skeftomai.tin.am +
+    Aisthanomai.ikanopoiimenos.me.tis.pithanotites.misthologikon.ayx.
+EXECUTE.
+COMPUTE Sbscale.Promotion=Yparxoun.poly.liges.eykairies.gia.proagogi.stin.ergasia.mou +
+    Osoi.ta.pigainoun.kala.sti.douleia.tous..exoun.arketes.pithanoti +
+    Oi.anthropoi.proodeyoun.edo.toso.grigora.oso.kai.se.alla.meri +
+    Eimai.ikanopoiimenos.me.tis.prooptikes.proagogis.
+EXECUTE.
+COMPUTE Sbscale.Supervision=O.I.proistamenos.mou.einai.arketa.ikanos.sti.douleia.tou.tis +
+    O.I.proistamenos.mou.einai.adikos.pros.emena +
+    O.I.proistamenos.deixnei.elaxisto.endiaferon.gia.ta.aisthimata.t + Sympatho.ton.proistameno.mou.
+EXECUTE.
+COMPUTE Sbscale.FringeBenefits=Den.eimai.ikanopoiimenos.me.tis.prosthetes.paroxes.pou.lambano +
+    Ta.ofeli.pou.apolambanoume.einai.exisou.kala.me.ayta.pou.prosfer +
+    To.paketo.paroxon.pou.exoume.einai.dikaio +
+    Yparxoun.prosthetes.paroxes.pou.den.exoume.eno.tha.eprepe.
+EXECUTE.
+COMPUTE Sbscale.ContingentRewards=Otan.kano.kala.ti.douleia.mou..lambano.tin.anagnorisi.pou.tha.ep
+    + Den.aisthanomai.pos.i.douleia.pou.kano.ektimatai +
+    Yparxoun.liges.antamoibes.gia.aytous.pou.douleyoun.edo +
+    Den.niotho.oti.oi.prospatheies.mou.antameibontai.opos.tha.eprepe.
+EXECUTE.
+COMPUTE Sbscale.OperatingConditions=
+    Polloi.apo.tous.kanones.kai.tis.diadikasies.kanoun.ti.sosti.ekte +
+    Oi.prospatheies.mou.na.kano.kala.ti.douleia.mou.spania.periorizo + Exo.poly.megalo.forto.ergasias +
+    Exo.polli.grafeiokratiki.douleia.
+EXECUTE.
+COMPUTE Sbscale.Coworkers=Sympatho.tous.anthropous.me.tous.opoious.ergazomai +
+    THeoro.oti.prepei.na.ergasto.pio.sklira.sti.douleia.mou.logo.tis +
+    Apolambano.na.ergazomai.me.tous.synadelfous.mou +
+    Yparxoun.arketes.diafonies.kai.diamaxes.sti.douleia.
+EXECUTE.
+COMPUTE Sbscale.Nature.Of.Work=Merikes.fores.aisthanomai.pos.i.douleia.mou.einai.anousia +
+    Mou.aresei.na.kano.ta.pragmata.pou.kano.sti.douleia.mou + Niotho.perifanos.kanontas.ti.douleia.mou
+    + I.douleia.mou.einai.eyxaristi.
+EXECUTE.
+COMPUTE Sbscale.Communication=I.epikoinonia.entos.tou.organismou.fainetai.na.einai.kali +
+    Oi.stoxoi.tou.organismou.den.einai.xekatharoi.se.emena +
+    Syxna.aisthanomai.pos.den.gnorizo.ti.symbainei.ston.organismo +
+    Ta.ergasiaka.kathikonta.den.exigountai.safos.
+EXECUTE.
+COMPUTE Sbscale.Total.Satisfaction=Aisthanomai.oti.ameibomai.dikaia.gia.ti.douleia.pou.kano +
+    Yparxoun.poly.liges.eykairies.gia.proagogi.stin.ergasia.mou +
+    O.I.proistamenos.mou.einai.arketa.ikanos.sti.douleia.tou.tis +
+    Den.eimai.ikanopoiimenos.me.tis.prosthetes.paroxes.pou.lambano +
+    Otan.kano.kala.ti.douleia.mou..lambano.tin.anagnorisi.pou.tha.ep +
+    Polloi.apo.tous.kanones.kai.tis.diadikasies.kanoun.ti.sosti.ekte +
+    Sympatho.tous.anthropous.me.tous.opoious.ergazomai +
+    Merikes.fores.aisthanomai.pos.i.douleia.mou.einai.anousia +
+    I.epikoinonia.entos.tou.organismou.fainetai.na.einai.kali + Oi.ayxiseis.einai.poly.spanies +
+    Osoi.ta.pigainoun.kala.sti.douleia.tous..exoun.arketes.pithanoti +
+    O.I.proistamenos.mou.einai.adikos.pros.emena +
+    Ta.ofeli.pou.apolambanoume.einai.exisou.kala.me.ayta.pou.prosfer +
+    Den.aisthanomai.pos.i.douleia.pou.kano.ektimatai +
+    Oi.prospatheies.mou.na.kano.kala.ti.douleia.mou.spania.periorizo +
+    THeoro.oti.prepei.na.ergasto.pio.sklira.sti.douleia.mou.logo.tis +
+    Mou.aresei.na.kano.ta.pragmata.pou.kano.sti.douleia.mou +
+    Oi.stoxoi.tou.organismou.den.einai.xekatharoi.se.emena +
+    Niotho.oti.den.ektimomai.apo.ton.organismo.otan.skeftomai.tin.am +
+    Oi.anthropoi.proodeyoun.edo.toso.grigora.oso.kai.se.alla.meri +
+    O.I.proistamenos.deixnei.elaxisto.endiaferon.gia.ta.aisthimata.t +
+    To.paketo.paroxon.pou.exoume.einai.dikaio + Yparxoun.liges.antamoibes.gia.aytous.pou.douleyoun.edo
+    + Exo.poly.megalo.forto.ergasias + Apolambano.na.ergazomai.me.tous.synadelfous.mou +
+    Syxna.aisthanomai.pos.den.gnorizo.ti.symbainei.ston.organismo +
+    Niotho.perifanos.kanontas.ti.douleia.mou +
+    Aisthanomai.ikanopoiimenos.me.tis.pithanotites.misthologikon.ayx +
+    Yparxoun.prosthetes.paroxes.pou.den.exoume.eno.tha.eprepe + Sympatho.ton.proistameno.mou +
+    Exo.polli.grafeiokratiki.douleia + Den.niotho.oti.oi.prospatheies.mou.antameibontai.opos.tha.eprepe
+    + Eimai.ikanopoiimenos.me.tis.prooptikes.proagogis +
+    Yparxoun.arketes.diafonies.kai.diamaxes.sti.douleia + I.douleia.mou.einai.eyxaristi +
+    Ta.ergasiaka.kathikonta.den.exigountai.safos.
+EXECUTE.
+COMPUTE Sbscale.DoubleTest.Total.Satisfaction=Sbscale.Pay + Sbscale.Promotion + Sbscale.Supervision
+    + Sbscale.FringeBenefits + Sbscale.ContingentRewards + Sbscale.OperatingConditions +
+    Sbscale.Coworkers + Sbscale.Nature.Of.Work + Sbscale.Communication .
+EXECUTE.
+COMPUTE Sbscale.Self.Awareness=O.I.proistamenos.mou.perigrafei.me.akribeia.ton.tropo.pou.oi.all +
+    O.I.proistamenos.mou.deixnei.oti.katanoei.ta.dynata.kai.ta.adyna +
+    O.I.proistamenos.mou.exei.xekathari.epignosi.tis.epidrasis.pou.a.
+EXECUTE.
+COMPUTE Sbscale.Relational.Transparency=O.I.proistamenos.mou.ekfrazei.me.safineia.ti.ennoei +
+    O.I.proistamenos.mou.moirazetai.anoixta.plirofories.me.tous.allo +
+    O.I.proistamenos.mou.ekfrazei.kathara.tis.idees.kai.tis.skepseis.
+EXECUTE.
+COMPUTE Sbscale.Balanced.Processing=O.I.proistamenos.mou.zita.idees.pou.amfisbitoun.tis.basikes.tou
+    + O.I.proistamenos.mou.akouei.prosektika.diaforetikes.apopseis.pri +
+    O.I.proistamenos.mou.analyei.antikeimenika.ta.sxetika.dedomena.p +
+    O.I.proistamenos.mou.entharrynei.tous.allous.na.ekfrazoun.antith.
+EXECUTE.
+COMPUTE Sbscale.Internalized.Moral.Perspective=
+    O.I.proistamenos.mou.deixnei.synepeia.metaxy.ton.pepoithiseon.to +
+    O.I.proistamenos.mou.basizetai.stis.basikes.tou.tis.pepoithiseis +
+    O.I.proistamenos.mou.antisteketai.stis.pieseis.na.kanei.pragmata +
+    O.I.proistamenos.mou.kathodigeitai.stis.praxeis.tou.tis.apo.esot.
+EXECUTE.
+
+COMPUTE Sbscale.Articulatin.a.vision=
+    O.I.proistamenos.mou.exei.xekathari.antilipsi.gia.to.pou.kateyth +
+    O.I.proistamenos.mou.parousiazei.mia.endiaferousa.eikona.gia.to +
+    O.I.proistamenos.mou.psaxnei.panta.nees.eykairies.gia.ton.organi +
+    O.I.proistamenos.mou.empneei.tous.allous.me.ta.plana.tou.tis.gia +
+    O.I.proistamenos.mou.katafernei.na.kanei.tous.allous.na.desmeyto.
+EXECUTE.
+COMPUTE Sbscale.Providing.an.appropriate.model=
+    O.I.proistamenos.mou.igeitai.mesa.apo.tis.praxeis.tou.tis.kai.ox +
+    O.I.proistamenos.mou.apotelei.ena.kalo.protypo.gia.na.akoloutho +
+    O.I.proistamenos.mou.igeitai.meso.tou.paradeigmatos.
+EXECUTE.
+COMPUTE Sbscale.Fostering.the.acceptance.of.group.goals=
+    O.I.proistamenos.mou.entharrynei.ti.synergasia.metaxy.ton.omadon +
+    O.I.proistamenos.mou.entharrynei.tous.ergazomenous.na.leitourgou +
+    O.I.proistamenos.mou.parakinei.tin.omada.na.synergazetai.gia.ton +
+    O.I.proistamenos.mou.kalliergei.omadiko.pneyma.kai.synergatiki.s.
+EXECUTE.
+COMPUTE Sbscale.High.performance.expectations= 
+    O.I.proistamenos.mou.deixnei.oti.exei.ypsiles.prosdokies.apo.ema + 
+    O.I.proistamenos.mou.epimenei.na.exoume.mono.tin.kalyteri.dynati + 
+    O.I.proistamenos.mou.den.symbibazetai.me.tipota.ligotero.apo.to. 
+EXECUTE. 
+RECODE O.I.proistamenos.mou.energei.xoris.na.lambanei.ypopsi.ta.synaist
+    O.I.proistamenos.mou.me.antimetopizei.xoris.na.lambanei.ypopsi.t (7=1) (6=2) (5=3) (4=4) (3=5)
+    (2=6) (1=7).
+EXECUTE.
+COMPUTE Sbscale.Providing.individualized.support=
+    O.I.proistamenos.mou.energei.xoris.na.lambanei.ypopsi.ta.synaist +
+    O.I.proistamenos.mou.deixnei.sebasmo.gia.ta.prosopika.mou.synais +
+    O.I.proistamenos.mou.symperiferetai.me.tropo.pou.lambanei.ypopsi
+    +O.I.proistamenos.mou.me.antimetopizei.xoris.na.lambanei.ypopsi.t.
+EXECUTE.
+COMPUTE Sbscale.Intellectual.stimulation=
+    O.I.proistamenos.mou.me.prokalei.na.skefto.palia.problimata.me.n +
+    O.I.proistamenos.mou.thetei.erotiseis.pou.me.othoun.na.skefto +
+    O.I.proistamenos.mou.me.exei.parakinisei.na.xanaskefto.ton.tropo +
+    O.I.proistamenos.mou.exei.idees.pou.me.exoun.prokalesei.na.epane.
+EXECUTE.
+COMPUTE Sbscale.Els=O.I.proistamenos.mou.akouei.ti.exoun.na.poun.oi.ergazomenoi +
+    O.I.proistamenos.mou.peitharxei.ergazomenous.pou.parabiazoun.ta +
+    O.I.proistamenos.mou.symperiferetai.stin.prosopiki.tou.tis.zoi.m +
+    O.I.proistamenos.mou.exei.sto.myalo.tou.tis.to.symferon.ton.erga +
+    O.I.proistamenos.mou.pairnei.dikaies.kai.isorropimenes.apofaseis +
+    O.I.proistamenos.mou.einai.axios.empistosynis +
+    O.I.proistamenos.mou.syzitaei.themata.epixeirimatikis.ithikis.i +
+    O.I.proistamenos.mou.dinei.to.paradeigma.gia.to.pos.prepei.na.gi +
+    O.I.proistamenos.mou.orizei.tin.epityxia.oxi.mono.apo.ta.apotele +
+    O.I.proistamenos.mou.otan.pairnei.apofaseis..rota..Poio.einai.to  .
+EXECUTE.
+
+COMPUTE ELS.Mean.score=Sbscale.Els / 10. 
+EXECUTE. 
+COMPUTE SA.Mean=Sbscale.Self.Awareness / 3. 
+EXECUTE. 
+COMPUTE RT.Mean=Sbscale.Relational.Transparency / 3. 
+EXECUTE. 
+COMPUTE BP.Mean=Sbscale.Balanced.Processing / 4. 
+EXECUTE. 
+COMPUTE IM.Mean=Sbscale.Internalized.Moral.Perspective / 4. 
+EXECUTE.  
+
+COMPUTE Intellectual.stimulation.Mean=Sbscale.Intellectual.stimulation / 4. 
+EXECUTE.  
+COMPUTE Providing.individualized.support.Mean=Sbscale.Providing.individualized.support/4. 
+EXECUTE.  
+COMPUTE High.performance.expectations.Mean=Sbscale.High.performance.expectations/3. 
+EXECUTE.  
+COMPUTE Fostering.the.acceptance.of.group.goals.Mean= 
+    Sbscale.Fostering.the.acceptance.of.group.goals/4. 
+EXECUTE.  
+COMPUTE Articulatin.a.vision.Mean=Sbscale.Articulatin.a.vision/5. 
+EXECUTE.  
+COMPUTE Providing.an.appropriate.model.Mean=Sbscale.Providing.an.appropriate.model/3. 
+EXECUTE.  
+
+ 
+IF  (Gia.logous.diasfalisis.tis.poiotitas.ton.dedomenon..parakalo.epi=7) 
+    Poiotita.Dedomenon=Gia.logous.diasfalisis.tis.poiotitas.ton.dedomenon..parakalo.epi. 
+EXECUTE. 
+COMPUTE Sbscale.Self.Awareness2=O.I.proistamenos.mou.zita.anatrofodotisi.gia.na.beltiosei.ton.tr + 
+    O.I.proistamenos.mou.perigrafei.me.akribeia.ton.tropo.pou.oi.all + 
+    O.I.proistamenos.mou.deixnei.oti.katanoei.ta.dynata.kai.ta.adyna + 
+    O.I.proistamenos.mou.exei.xekathari.epignosi.tis.epidrasis.pou.a. 
+EXECUTE. 
+COMPUTE Sbscale.Relational.Transparency2=O.I.proistamenos.mou.ekfrazei.me.safineia.ti.ennoei + 
+    O.I.proistamenos.mou.anagnorizei.ta.lathi.tou.tis.otan.symbainou + 
+    O.I.proistamenos.mou.moirazetai.anoixta.plirofories.me.tous.allo + 
+    O.I.proistamenos.mou.ekfrazei.kathara.tis.idees.kai.tis.skepseis. 
+EXECUTE.
+COMPUTE SA.Mean2=Sbscale.Self.Awareness2 / 4. 
+EXECUTE. 
+COMPUTE RT.Mean2=Sbscale.Relational.Transparency2 / 4. 
+EXECUTE. 
+
+DESCRIPTIVES VARIABLES=Sbscale.Total.Satisfaction ELS.Mean.score SA.Mean RT.Mean BP.Mean IM.Mean 
+    Intellectual.stimulation.Mean Providing.individualized.support.Mean 
+    High.performance.expectations.Mean Fostering.the.acceptance.of.group.goals.Mean 
+    Articulatin.a.vision.Mean Providing.an.appropriate.model.Mean SA.Mean2 RT.Mean2 
+    ALI2.TOTAL.MEAN.SCORE TLI.TOTAL.MEAN.SCORE ALI.TOTAL.MEAN.SCORE 
+  /STATISTICS=MEAN STDDEV MIN MAX.
+FREQUENCIES VARIABLES=Ilikia Fylo Epipedo.Spoudon Ergasiaki.empeiria Ergasiakos.Klados 
+    Topos.Ergasias2 Poiotita.Dedomenon 
+  /ORDER=ANALYSIS.
+
+
+
+
+
+RELIABILITY 
+  /VARIABLES=Aisthanomai.oti.ameibomai.dikaia.gia.ti.douleia.pou.kano 
+    Oi.ayxiseis.einai.poly.spanies Niotho.oti.den.ektimomai.apo.ton.organismo.otan.skeftomai.tin.am 
+    Aisthanomai.ikanopoiimenos.me.tis.pithanotites.misthologikon.ayx 
+  /SCALE('PAY') ALL 
+  /MODEL=ALPHA 
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV 
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+RELIABILITY 
+  /VARIABLES=Yparxoun.poly.liges.eykairies.gia.proagogi.stin.ergasia.mou 
+    Osoi.ta.pigainoun.kala.sti.douleia.tous..exoun.arketes.pithanoti 
+    Oi.anthropoi.proodeyoun.edo.toso.grigora.oso.kai.se.alla.meri 
+    Eimai.ikanopoiimenos.me.tis.prooptikes.proagogis 
+  /SCALE('Promotion') ALL 
+  /MODEL=ALPHA 
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV 
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+RELIABILITY
+  /VARIABLES=O.I.proistamenos.mou.einai.arketa.ikanos.sti.douleia.tou.tis
+    O.I.proistamenos.mou.einai.adikos.pros.emena
+    O.I.proistamenos.deixnei.elaxisto.endiaferon.gia.ta.aisthimata.t Sympatho.ton.proistameno.mou
+  /SCALE('Supervision') ALL
+  /MODEL=ALPHA
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+RELIABILITY
+  /VARIABLES=Den.eimai.ikanopoiimenos.me.tis.prosthetes.paroxes.pou.lambano
+    Ta.ofeli.pou.apolambanoume.einai.exisou.kala.me.ayta.pou.prosfer
+    To.paketo.paroxon.pou.exoume.einai.dikaio Yparxoun.prosthetes.paroxes.pou.den.exoume.eno.tha.eprepe
+  /SCALE('FringeBenefits') ALL
+  /MODEL=ALPHA
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+RELIABILITY
+  /VARIABLES=Otan.kano.kala.ti.douleia.mou..lambano.tin.anagnorisi.pou.tha.ep
+    Den.aisthanomai.pos.i.douleia.pou.kano.ektimatai
+    Yparxoun.liges.antamoibes.gia.aytous.pou.douleyoun.edo
+    Den.niotho.oti.oi.prospatheies.mou.antameibontai.opos.tha.eprepe
+  /SCALE('ContingentRewards') ALL
+  /MODEL=ALPHA
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+RELIABILITY
+  /VARIABLES=Polloi.apo.tous.kanones.kai.tis.diadikasies.kanoun.ti.sosti.ekte
+    Oi.prospatheies.mou.na.kano.kala.ti.douleia.mou.spania.periorizo Exo.poly.megalo.forto.ergasias
+    Exo.polli.grafeiokratiki.douleia
+  /SCALE('OperatingConditions') ALL
+  /MODEL=ALPHA
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+RELIABILITY
+  /VARIABLES=Sympatho.tous.anthropous.me.tous.opoious.ergazomai
+    THeoro.oti.prepei.na.ergasto.pio.sklira.sti.douleia.mou.logo.tis
+    Apolambano.na.ergazomai.me.tous.synadelfous.mou Yparxoun.arketes.diafonies.kai.diamaxes.sti.douleia
+  /SCALE('Coworkers') ALL
+  /MODEL=ALPHA
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+RELIABILITY
+  /VARIABLES=Merikes.fores.aisthanomai.pos.i.douleia.mou.einai.anousia
+    Mou.aresei.na.kano.ta.pragmata.pou.kano.sti.douleia.mou Niotho.perifanos.kanontas.ti.douleia.mou
+    I.douleia.mou.einai.eyxaristi
+  /SCALE('Nature.Of.Work') ALL
+  /MODEL=ALPHA
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+RELIABILITY
+  /VARIABLES=I.epikoinonia.entos.tou.organismou.fainetai.na.einai.kali
+    Oi.stoxoi.tou.organismou.den.einai.xekatharoi.se.emena
+    Syxna.aisthanomai.pos.den.gnorizo.ti.symbainei.ston.organismo
+    Ta.ergasiaka.kathikonta.den.exigountai.safos
+  /SCALE('Communication') ALL
+  /MODEL=ALPHA
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+RELIABILITY
+  /VARIABLES=I.epikoinonia.entos.tou.organismou.fainetai.na.einai.kali
+    Oi.stoxoi.tou.organismou.den.einai.xekatharoi.se.emena
+    Syxna.aisthanomai.pos.den.gnorizo.ti.symbainei.ston.organismo
+    Ta.ergasiaka.kathikonta.den.exigountai.safos
+    Aisthanomai.oti.ameibomai.dikaia.gia.ti.douleia.pou.kano
+    Yparxoun.poly.liges.eykairies.gia.proagogi.stin.ergasia.mou
+    O.I.proistamenos.mou.einai.arketa.ikanos.sti.douleia.tou.tis
+    Den.eimai.ikanopoiimenos.me.tis.prosthetes.paroxes.pou.lambano
+    Otan.kano.kala.ti.douleia.mou..lambano.tin.anagnorisi.pou.tha.ep
+    Polloi.apo.tous.kanones.kai.tis.diadikasies.kanoun.ti.sosti.ekte
+    Sympatho.tous.anthropous.me.tous.opoious.ergazomai
+    Merikes.fores.aisthanomai.pos.i.douleia.mou.einai.anousia Oi.ayxiseis.einai.poly.spanies
+    Osoi.ta.pigainoun.kala.sti.douleia.tous..exoun.arketes.pithanoti
+    O.I.proistamenos.mou.einai.adikos.pros.emena
+    Ta.ofeli.pou.apolambanoume.einai.exisou.kala.me.ayta.pou.prosfer
+    Den.aisthanomai.pos.i.douleia.pou.kano.ektimatai
+    Oi.prospatheies.mou.na.kano.kala.ti.douleia.mou.spania.periorizo
+    THeoro.oti.prepei.na.ergasto.pio.sklira.sti.douleia.mou.logo.tis
+    Mou.aresei.na.kano.ta.pragmata.pou.kano.sti.douleia.mou
+    Niotho.oti.den.ektimomai.apo.ton.organismo.otan.skeftomai.tin.am
+    Oi.anthropoi.proodeyoun.edo.toso.grigora.oso.kai.se.alla.meri
+    O.I.proistamenos.deixnei.elaxisto.endiaferon.gia.ta.aisthimata.t
+    To.paketo.paroxon.pou.exoume.einai.dikaio Exo.poly.megalo.forto.ergasias
+    Yparxoun.liges.antamoibes.gia.aytous.pou.douleyoun.edo
+    Apolambano.na.ergazomai.me.tous.synadelfous.mou Niotho.perifanos.kanontas.ti.douleia.mou
+    Yparxoun.prosthetes.paroxes.pou.den.exoume.eno.tha.eprepe
+    Aisthanomai.ikanopoiimenos.me.tis.pithanotites.misthologikon.ayx Sympatho.ton.proistameno.mou
+    Exo.polli.grafeiokratiki.douleia Den.niotho.oti.oi.prospatheies.mou.antameibontai.opos.tha.eprepe
+    Eimai.ikanopoiimenos.me.tis.prooptikes.proagogis
+    Yparxoun.arketes.diafonies.kai.diamaxes.sti.douleia I.douleia.mou.einai.eyxaristi
+  /SCALE('Total.Satisfaction') ALL
+  /MODEL=ALPHA
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+RELIABILITY
+  /VARIABLES=O.I.proistamenos.mou.perigrafei.me.akribeia.ton.tropo.pou.oi.all
+    O.I.proistamenos.mou.deixnei.oti.katanoei.ta.dynata.kai.ta.adyna
+    O.I.proistamenos.mou.exei.xekathari.epignosi.tis.epidrasis.pou.a
+  /SCALE('Self.Awareness1') ALL
+  /MODEL=ALPHA
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+RELIABILITY
+  /VARIABLES=O.I.proistamenos.mou.perigrafei.me.akribeia.ton.tropo.pou.oi.all
+    O.I.proistamenos.mou.deixnei.oti.katanoei.ta.dynata.kai.ta.adyna
+    O.I.proistamenos.mou.exei.xekathari.epignosi.tis.epidrasis.pou.a
+    O.I.proistamenos.mou.zita.anatrofodotisi.gia.na.beltiosei.ton.tr
+  /SCALE('Self.Awareness2') ALL
+  /MODEL=ALPHA
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+RELIABILITY
+  /VARIABLES=O.I.proistamenos.mou.ekfrazei.me.safineia.ti.ennoei
+    O.I.proistamenos.mou.ekfrazei.kathara.tis.idees.kai.tis.skepseis
+    O.I.proistamenos.mou.moirazetai.anoixta.plirofories.me.tous.allo
+  /SCALE('Relational.Transparency1') ALL
+  /MODEL=ALPHA
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+RELIABILITY
+  /VARIABLES=O.I.proistamenos.mou.ekfrazei.me.safineia.ti.ennoei
+    O.I.proistamenos.mou.ekfrazei.kathara.tis.idees.kai.tis.skepseis
+    O.I.proistamenos.mou.moirazetai.anoixta.plirofories.me.tous.allo
+    O.I.proistamenos.mou.anagnorizei.ta.lathi.tou.tis.otan.symbainou
+  /SCALE('Relational.Transparency2') ALL
+  /MODEL=ALPHA
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+RELIABILITY
+  /VARIABLES=O.I.proistamenos.mou.zita.idees.pou.amfisbitoun.tis.basikes.tou
+    O.I.proistamenos.mou.akouei.prosektika.diaforetikes.apopseis.pri
+    O.I.proistamenos.mou.analyei.antikeimenika.ta.sxetika.dedomena.p
+    O.I.proistamenos.mou.entharrynei.tous.allous.na.ekfrazoun.antith
+  /SCALE('Balanced.Processing') ALL
+  /MODEL=ALPHA
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+RELIABILITY
+  /VARIABLES=O.I.proistamenos.mou.deixnei.synepeia.metaxy.ton.pepoithiseon.to
+    O.I.proistamenos.mou.basizetai.stis.basikes.tou.tis.pepoithiseis
+    O.I.proistamenos.mou.antisteketai.stis.pieseis.na.kanei.pragmata
+    O.I.proistamenos.mou.kathodigeitai.stis.praxeis.tou.tis.apo.esot
+  /SCALE('Internalized.Moral.Perspective') ALL
+  /MODEL=ALPHA
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+RELIABILITY
+  /VARIABLES=O.I.proistamenos.mou.parousiazei.mia.endiaferousa.eikona.gia.to
+    O.I.proistamenos.mou.exei.xekathari.antilipsi.gia.to.pou.kateyth
+    O.I.proistamenos.mou.empneei.tous.allous.me.ta.plana.tou.tis.gia
+    O.I.proistamenos.mou.katafernei.na.kanei.tous.allous.na.desmeyto
+  /SCALE('Articulatin.a.vision') ALL
+  /MODEL=ALPHA
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+RELIABILITY
+  /VARIABLES=O.I.proistamenos.mou.igeitai.mesa.apo.tis.praxeis.tou.tis.kai.ox
+    O.I.proistamenos.mou.apotelei.ena.kalo.protypo.gia.na.akoloutho
+    O.I.proistamenos.mou.igeitai.meso.tou.paradeigmatos
+  /SCALE('Providing.an.appropriate.model') ALL
+  /MODEL=ALPHA
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+RELIABILITY
+  /VARIABLES=O.I.proistamenos.mou.entharrynei.ti.synergasia.metaxy.ton.omadon
+    O.I.proistamenos.mou.entharrynei.tous.ergazomenous.na.leitourgou
+    O.I.proistamenos.mou.parakinei.tin.omada.na.synergazetai.gia.ton
+    O.I.proistamenos.mou.kalliergei.omadiko.pneyma.kai.synergatiki.s
+  /SCALE('Fostering.the.acceptance.of.group.goals') ALL
+  /MODEL=ALPHA
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV
+  /SUMMARY=TOTAL MEANS VARIANCE.
+ 
+RELIABILITY 
+  /VARIABLES=O.I.proistamenos.mou.deixnei.oti.exei.ypsiles.prosdokies.apo.ema 
+    O.I.proistamenos.mou.epimenei.na.exoume.mono.tin.kalyteri.dynati 
+    O.I.proistamenos.mou.den.symbibazetai.me.tipota.ligotero.apo.to 
+  /SCALE('High.performance.expectations') ALL 
+  /MODEL=ALPHA 
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV 
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+RELIABILITY
+  /VARIABLES=O.I.proistamenos.mou.energei.xoris.na.lambanei.ypopsi.ta.synaist
+    O.I.proistamenos.mou.deixnei.sebasmo.gia.ta.prosopika.mou.synais
+    O.I.proistamenos.mou.symperiferetai.me.tropo.pou.lambanei.ypopsi
+    O.I.proistamenos.mou.me.antimetopizei.xoris.na.lambanei.ypopsi.t
+  /SCALE('Providing.individualized.support') ALL
+  /MODEL=ALPHA
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+RELIABILITY
+  /VARIABLES=O.I.proistamenos.mou.me.exei.parakinisei.na.xanaskefto.ton.tropo
+    O.I.proistamenos.mou.exei.idees.pou.me.exoun.prokalesei.na.epane
+    O.I.proistamenos.mou.me.prokalei.na.skefto.palia.problimata.me.n
+    O.I.proistamenos.mou.thetei.erotiseis.pou.me.othoun.na.skefto
+  /SCALE('Intellectual.stimulation') ALL
+  /MODEL=ALPHA
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+RELIABILITY
+  /VARIABLES=O.I.proistamenos.mou.akouei.ti.exoun.na.poun.oi.ergazomenoi
+    O.I.proistamenos.mou.peitharxei.ergazomenous.pou.parabiazoun.ta
+    O.I.proistamenos.mou.symperiferetai.stin.prosopiki.tou.tis.zoi.m
+    O.I.proistamenos.mou.exei.sto.myalo.tou.tis.to.symferon.ton.erga
+    O.I.proistamenos.mou.pairnei.dikaies.kai.isorropimenes.apofaseis
+    O.I.proistamenos.mou.einai.axios.empistosynis
+    O.I.proistamenos.mou.syzitaei.themata.epixeirimatikis.ithikis.i
+    O.I.proistamenos.mou.dinei.to.paradeigma.gia.to.pos.prepei.na.gi
+    O.I.proistamenos.mou.orizei.tin.epityxia.oxi.mono.apo.ta.apotele
+    O.I.proistamenos.mou.otan.pairnei.apofaseis..rota..Poio.einai.to
+  /SCALE('Ethical Leadership') ALL
+  /MODEL=ALPHA
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+RELIABILITY
+  /VARIABLES=O.I.proistamenos.mou.psaxnei.panta.nees.eykairies.gia.ton.organi
+    O.I.proistamenos.mou.parousiazei.mia.endiaferousa.eikona.gia.to
+    O.I.proistamenos.mou.exei.xekathari.antilipsi.gia.to.pou.kateyth
+    O.I.proistamenos.mou.empneei.tous.allous.me.ta.plana.tou.tis.gia
+    O.I.proistamenos.mou.katafernei.na.kanei.tous.allous.na.desmeyto
+    O.I.proistamenos.mou.igeitai.mesa.apo.tis.praxeis.tou.tis.kai.ox
+    O.I.proistamenos.mou.apotelei.ena.kalo.protypo.gia.na.akoloutho
+    O.I.proistamenos.mou.igeitai.meso.tou.paradeigmatos
+    O.I.proistamenos.mou.entharrynei.ti.synergasia.metaxy.ton.omadon
+    O.I.proistamenos.mou.entharrynei.tous.ergazomenous.na.leitourgou
+    O.I.proistamenos.mou.parakinei.tin.omada.na.synergazetai.gia.ton
+    O.I.proistamenos.mou.kalliergei.omadiko.pneyma.kai.synergatiki.s
+    O.I.proistamenos.mou.deixnei.oti.exei.ypsiles.prosdokies.apo.ema
+    O.I.proistamenos.mou.epimenei.na.exoume.mono.tin.kalyteri.dynati
+    O.I.proistamenos.mou.den.symbibazetai.me.tipota.ligotero.apo.to
+    O.I.proistamenos.mou.energei.xoris.na.lambanei.ypopsi.ta.synaist
+    O.I.proistamenos.mou.deixnei.sebasmo.gia.ta.prosopika.mou.synais
+    O.I.proistamenos.mou.symperiferetai.me.tropo.pou.lambanei.ypopsi
+    O.I.proistamenos.mou.me.antimetopizei.xoris.na.lambanei.ypopsi.t
+    O.I.proistamenos.mou.me.exei.parakinisei.na.xanaskefto.ton.tropo
+    O.I.proistamenos.mou.exei.idees.pou.me.exoun.prokalesei.na.epane
+    O.I.proistamenos.mou.me.prokalei.na.skefto.palia.problimata.me.n
+    O.I.proistamenos.mou.thetei.erotiseis.pou.me.othoun.na.skefto
+  /SCALE('Transformational Leadership') ALL
+  /MODEL=ALPHA
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+RELIABILITY
+  /VARIABLES=O.I.proistamenos.mou.zita.anatrofodotisi.gia.na.beltiosei.ton.tr
+    O.I.proistamenos.mou.ekfrazei.me.safineia.ti.ennoei
+    O.I.proistamenos.mou.deixnei.synepeia.metaxy.ton.pepoithiseon.to
+    O.I.proistamenos.mou.zita.idees.pou.amfisbitoun.tis.basikes.tou
+    O.I.proistamenos.mou.perigrafei.me.akribeia.ton.tropo.pou.oi.all
+    O.I.proistamenos.mou.anagnorizei.ta.lathi.tou.tis.otan.symbainou
+    O.I.proistamenos.mou.basizetai.stis.basikes.tou.tis.pepoithiseis
+    O.I.proistamenos.mou.akouei.prosektika.diaforetikes.apopseis.pri
+    O.I.proistamenos.mou.deixnei.oti.katanoei.ta.dynata.kai.ta.adyna
+    O.I.proistamenos.mou.moirazetai.anoixta.plirofories.me.tous.allo
+    O.I.proistamenos.mou.antisteketai.stis.pieseis.na.kanei.pragmata
+    O.I.proistamenos.mou.analyei.antikeimenika.ta.sxetika.dedomena.p
+    O.I.proistamenos.mou.exei.xekathari.epignosi.tis.epidrasis.pou.a
+    O.I.proistamenos.mou.ekfrazei.kathara.tis.idees.kai.tis.skepseis
+    O.I.proistamenos.mou.kathodigeitai.stis.praxeis.tou.tis.apo.esot
+    O.I.proistamenos.mou.entharrynei.tous.allous.na.ekfrazoun.antith
+  /SCALE('Authentic Leadership2') ALL
+  /MODEL=ALPHA
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+
+RELIABILITY
+  /VARIABLES=
+    O.I.proistamenos.mou.ekfrazei.me.safineia.ti.ennoei
+    O.I.proistamenos.mou.deixnei.synepeia.metaxy.ton.pepoithiseon.to
+    O.I.proistamenos.mou.zita.idees.pou.amfisbitoun.tis.basikes.tou
+    O.I.proistamenos.mou.perigrafei.me.akribeia.ton.tropo.pou.oi.all
+    O.I.proistamenos.mou.basizetai.stis.basikes.tou.tis.pepoithiseis
+    O.I.proistamenos.mou.akouei.prosektika.diaforetikes.apopseis.pri
+    O.I.proistamenos.mou.deixnei.oti.katanoei.ta.dynata.kai.ta.adyna
+    O.I.proistamenos.mou.moirazetai.anoixta.plirofories.me.tous.allo
+    O.I.proistamenos.mou.antisteketai.stis.pieseis.na.kanei.pragmata
+    O.I.proistamenos.mou.analyei.antikeimenika.ta.sxetika.dedomena.p
+    O.I.proistamenos.mou.exei.xekathari.epignosi.tis.epidrasis.pou.a
+    O.I.proistamenos.mou.ekfrazei.kathara.tis.idees.kai.tis.skepseis
+    O.I.proistamenos.mou.kathodigeitai.stis.praxeis.tou.tis.apo.esot
+    O.I.proistamenos.mou.entharrynei.tous.allous.na.ekfrazoun.antith
+  /SCALE('Authentic Leadership') ALL
+  /MODEL=ALPHA
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+SORT CASES  BY Poiotita.Dedomenon. 
+SPLIT FILE SEPARATE BY Poiotita.Dedomenon.
+
+
+RELIABILITY 
+  /VARIABLES=Aisthanomai.oti.ameibomai.dikaia.gia.ti.douleia.pou.kano 
+    Oi.ayxiseis.einai.poly.spanies Niotho.oti.den.ektimomai.apo.ton.organismo.otan.skeftomai.tin.am 
+    Aisthanomai.ikanopoiimenos.me.tis.pithanotites.misthologikon.ayx 
+  /SCALE('PAY') ALL 
+  /MODEL=ALPHA 
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV 
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+RELIABILITY 
+  /VARIABLES=Yparxoun.poly.liges.eykairies.gia.proagogi.stin.ergasia.mou 
+    Osoi.ta.pigainoun.kala.sti.douleia.tous..exoun.arketes.pithanoti 
+    Oi.anthropoi.proodeyoun.edo.toso.grigora.oso.kai.se.alla.meri 
+    Eimai.ikanopoiimenos.me.tis.prooptikes.proagogis 
+  /SCALE('Promotion') ALL 
+  /MODEL=ALPHA 
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV 
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+RELIABILITY
+  /VARIABLES=O.I.proistamenos.mou.einai.arketa.ikanos.sti.douleia.tou.tis
+    O.I.proistamenos.mou.einai.adikos.pros.emena
+    O.I.proistamenos.deixnei.elaxisto.endiaferon.gia.ta.aisthimata.t Sympatho.ton.proistameno.mou
+  /SCALE('Supervision') ALL
+  /MODEL=ALPHA
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+RELIABILITY
+  /VARIABLES=Den.eimai.ikanopoiimenos.me.tis.prosthetes.paroxes.pou.lambano
+    Ta.ofeli.pou.apolambanoume.einai.exisou.kala.me.ayta.pou.prosfer
+    To.paketo.paroxon.pou.exoume.einai.dikaio Yparxoun.prosthetes.paroxes.pou.den.exoume.eno.tha.eprepe
+  /SCALE('FringeBenefits') ALL
+  /MODEL=ALPHA
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+RELIABILITY
+  /VARIABLES=Otan.kano.kala.ti.douleia.mou..lambano.tin.anagnorisi.pou.tha.ep
+    Den.aisthanomai.pos.i.douleia.pou.kano.ektimatai
+    Yparxoun.liges.antamoibes.gia.aytous.pou.douleyoun.edo
+    Den.niotho.oti.oi.prospatheies.mou.antameibontai.opos.tha.eprepe
+  /SCALE('ContingentRewards') ALL
+  /MODEL=ALPHA
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+RELIABILITY
+  /VARIABLES=Polloi.apo.tous.kanones.kai.tis.diadikasies.kanoun.ti.sosti.ekte
+    Oi.prospatheies.mou.na.kano.kala.ti.douleia.mou.spania.periorizo Exo.poly.megalo.forto.ergasias
+    Exo.polli.grafeiokratiki.douleia
+  /SCALE('OperatingConditions') ALL
+  /MODEL=ALPHA
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+RELIABILITY
+  /VARIABLES=Sympatho.tous.anthropous.me.tous.opoious.ergazomai
+    THeoro.oti.prepei.na.ergasto.pio.sklira.sti.douleia.mou.logo.tis
+    Apolambano.na.ergazomai.me.tous.synadelfous.mou Yparxoun.arketes.diafonies.kai.diamaxes.sti.douleia
+  /SCALE('Coworkers') ALL
+  /MODEL=ALPHA
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+RELIABILITY
+  /VARIABLES=Merikes.fores.aisthanomai.pos.i.douleia.mou.einai.anousia
+    Mou.aresei.na.kano.ta.pragmata.pou.kano.sti.douleia.mou Niotho.perifanos.kanontas.ti.douleia.mou
+    I.douleia.mou.einai.eyxaristi
+  /SCALE('Nature.Of.Work') ALL
+  /MODEL=ALPHA
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+RELIABILITY
+  /VARIABLES=I.epikoinonia.entos.tou.organismou.fainetai.na.einai.kali
+    Oi.stoxoi.tou.organismou.den.einai.xekatharoi.se.emena
+    Syxna.aisthanomai.pos.den.gnorizo.ti.symbainei.ston.organismo
+    Ta.ergasiaka.kathikonta.den.exigountai.safos
+  /SCALE('Communication') ALL
+  /MODEL=ALPHA
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+RELIABILITY
+  /VARIABLES=I.epikoinonia.entos.tou.organismou.fainetai.na.einai.kali
+    Oi.stoxoi.tou.organismou.den.einai.xekatharoi.se.emena
+    Syxna.aisthanomai.pos.den.gnorizo.ti.symbainei.ston.organismo
+    Ta.ergasiaka.kathikonta.den.exigountai.safos
+    Aisthanomai.oti.ameibomai.dikaia.gia.ti.douleia.pou.kano
+    Yparxoun.poly.liges.eykairies.gia.proagogi.stin.ergasia.mou
+    O.I.proistamenos.mou.einai.arketa.ikanos.sti.douleia.tou.tis
+    Den.eimai.ikanopoiimenos.me.tis.prosthetes.paroxes.pou.lambano
+    Otan.kano.kala.ti.douleia.mou..lambano.tin.anagnorisi.pou.tha.ep
+    Polloi.apo.tous.kanones.kai.tis.diadikasies.kanoun.ti.sosti.ekte
+    Sympatho.tous.anthropous.me.tous.opoious.ergazomai
+    Merikes.fores.aisthanomai.pos.i.douleia.mou.einai.anousia Oi.ayxiseis.einai.poly.spanies
+    Osoi.ta.pigainoun.kala.sti.douleia.tous..exoun.arketes.pithanoti
+    O.I.proistamenos.mou.einai.adikos.pros.emena
+    Ta.ofeli.pou.apolambanoume.einai.exisou.kala.me.ayta.pou.prosfer
+    Den.aisthanomai.pos.i.douleia.pou.kano.ektimatai
+    Oi.prospatheies.mou.na.kano.kala.ti.douleia.mou.spania.periorizo
+    THeoro.oti.prepei.na.ergasto.pio.sklira.sti.douleia.mou.logo.tis
+    Mou.aresei.na.kano.ta.pragmata.pou.kano.sti.douleia.mou
+    Niotho.oti.den.ektimomai.apo.ton.organismo.otan.skeftomai.tin.am
+    Oi.anthropoi.proodeyoun.edo.toso.grigora.oso.kai.se.alla.meri
+    O.I.proistamenos.deixnei.elaxisto.endiaferon.gia.ta.aisthimata.t
+    To.paketo.paroxon.pou.exoume.einai.dikaio Exo.poly.megalo.forto.ergasias
+    Yparxoun.liges.antamoibes.gia.aytous.pou.douleyoun.edo
+    Apolambano.na.ergazomai.me.tous.synadelfous.mou Niotho.perifanos.kanontas.ti.douleia.mou
+    Yparxoun.prosthetes.paroxes.pou.den.exoume.eno.tha.eprepe
+    Aisthanomai.ikanopoiimenos.me.tis.pithanotites.misthologikon.ayx Sympatho.ton.proistameno.mou
+    Exo.polli.grafeiokratiki.douleia Den.niotho.oti.oi.prospatheies.mou.antameibontai.opos.tha.eprepe
+    Eimai.ikanopoiimenos.me.tis.prooptikes.proagogis
+    Yparxoun.arketes.diafonies.kai.diamaxes.sti.douleia I.douleia.mou.einai.eyxaristi
+  /SCALE('Total.Satisfaction') ALL
+  /MODEL=ALPHA
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+RELIABILITY
+  /VARIABLES=O.I.proistamenos.mou.perigrafei.me.akribeia.ton.tropo.pou.oi.all
+    O.I.proistamenos.mou.deixnei.oti.katanoei.ta.dynata.kai.ta.adyna
+    O.I.proistamenos.mou.exei.xekathari.epignosi.tis.epidrasis.pou.a
+  /SCALE('Self.Awareness1') ALL
+  /MODEL=ALPHA
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+RELIABILITY
+  /VARIABLES=O.I.proistamenos.mou.perigrafei.me.akribeia.ton.tropo.pou.oi.all
+    O.I.proistamenos.mou.deixnei.oti.katanoei.ta.dynata.kai.ta.adyna
+    O.I.proistamenos.mou.exei.xekathari.epignosi.tis.epidrasis.pou.a
+    O.I.proistamenos.mou.zita.anatrofodotisi.gia.na.beltiosei.ton.tr
+  /SCALE('Self.Awareness2') ALL
+  /MODEL=ALPHA
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+RELIABILITY
+  /VARIABLES=O.I.proistamenos.mou.ekfrazei.me.safineia.ti.ennoei
+    O.I.proistamenos.mou.ekfrazei.kathara.tis.idees.kai.tis.skepseis
+    O.I.proistamenos.mou.moirazetai.anoixta.plirofories.me.tous.allo
+  /SCALE('Relational.Transparency1') ALL
+  /MODEL=ALPHA
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+RELIABILITY
+  /VARIABLES=O.I.proistamenos.mou.ekfrazei.me.safineia.ti.ennoei
+    O.I.proistamenos.mou.ekfrazei.kathara.tis.idees.kai.tis.skepseis
+    O.I.proistamenos.mou.moirazetai.anoixta.plirofories.me.tous.allo
+    O.I.proistamenos.mou.anagnorizei.ta.lathi.tou.tis.otan.symbainou
+  /SCALE('Relational.Transparency2') ALL
+  /MODEL=ALPHA
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+RELIABILITY
+  /VARIABLES=O.I.proistamenos.mou.zita.idees.pou.amfisbitoun.tis.basikes.tou
+    O.I.proistamenos.mou.akouei.prosektika.diaforetikes.apopseis.pri
+    O.I.proistamenos.mou.analyei.antikeimenika.ta.sxetika.dedomena.p
+    O.I.proistamenos.mou.entharrynei.tous.allous.na.ekfrazoun.antith
+  /SCALE('Balanced.Processing') ALL
+  /MODEL=ALPHA
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+RELIABILITY
+  /VARIABLES=O.I.proistamenos.mou.deixnei.synepeia.metaxy.ton.pepoithiseon.to
+    O.I.proistamenos.mou.basizetai.stis.basikes.tou.tis.pepoithiseis
+    O.I.proistamenos.mou.antisteketai.stis.pieseis.na.kanei.pragmata
+    O.I.proistamenos.mou.kathodigeitai.stis.praxeis.tou.tis.apo.esot
+  /SCALE('Internalized.Moral.Perspective') ALL
+  /MODEL=ALPHA
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+RELIABILITY
+  /VARIABLES=O.I.proistamenos.mou.parousiazei.mia.endiaferousa.eikona.gia.to
+    O.I.proistamenos.mou.exei.xekathari.antilipsi.gia.to.pou.kateyth
+    O.I.proistamenos.mou.empneei.tous.allous.me.ta.plana.tou.tis.gia
+    O.I.proistamenos.mou.katafernei.na.kanei.tous.allous.na.desmeyto
+  /SCALE('Articulatin.a.vision') ALL
+  /MODEL=ALPHA
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+RELIABILITY
+  /VARIABLES=O.I.proistamenos.mou.igeitai.mesa.apo.tis.praxeis.tou.tis.kai.ox
+    O.I.proistamenos.mou.apotelei.ena.kalo.protypo.gia.na.akoloutho
+    O.I.proistamenos.mou.igeitai.meso.tou.paradeigmatos
+  /SCALE('Providing.an.appropriate.model') ALL
+  /MODEL=ALPHA
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+RELIABILITY
+  /VARIABLES=O.I.proistamenos.mou.entharrynei.ti.synergasia.metaxy.ton.omadon
+    O.I.proistamenos.mou.entharrynei.tous.ergazomenous.na.leitourgou
+    O.I.proistamenos.mou.parakinei.tin.omada.na.synergazetai.gia.ton
+    O.I.proistamenos.mou.kalliergei.omadiko.pneyma.kai.synergatiki.s
+  /SCALE('Fostering.the.acceptance.of.group.goals') ALL
+  /MODEL=ALPHA
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV
+  /SUMMARY=TOTAL MEANS VARIANCE.
+ 
+RELIABILITY 
+  /VARIABLES=O.I.proistamenos.mou.deixnei.oti.exei.ypsiles.prosdokies.apo.ema 
+    O.I.proistamenos.mou.epimenei.na.exoume.mono.tin.kalyteri.dynati 
+    O.I.proistamenos.mou.den.symbibazetai.me.tipota.ligotero.apo.to 
+  /SCALE('High.performance.expectations') ALL 
+  /MODEL=ALPHA 
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV 
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+RELIABILITY
+  /VARIABLES=O.I.proistamenos.mou.energei.xoris.na.lambanei.ypopsi.ta.synaist
+    O.I.proistamenos.mou.deixnei.sebasmo.gia.ta.prosopika.mou.synais
+    O.I.proistamenos.mou.symperiferetai.me.tropo.pou.lambanei.ypopsi
+    O.I.proistamenos.mou.me.antimetopizei.xoris.na.lambanei.ypopsi.t
+  /SCALE('Providing.individualized.support') ALL
+  /MODEL=ALPHA
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+RELIABILITY
+  /VARIABLES=O.I.proistamenos.mou.me.exei.parakinisei.na.xanaskefto.ton.tropo
+    O.I.proistamenos.mou.exei.idees.pou.me.exoun.prokalesei.na.epane
+    O.I.proistamenos.mou.me.prokalei.na.skefto.palia.problimata.me.n
+    O.I.proistamenos.mou.thetei.erotiseis.pou.me.othoun.na.skefto
+  /SCALE('Intellectual.stimulation') ALL
+  /MODEL=ALPHA
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+RELIABILITY
+  /VARIABLES=O.I.proistamenos.mou.akouei.ti.exoun.na.poun.oi.ergazomenoi
+    O.I.proistamenos.mou.peitharxei.ergazomenous.pou.parabiazoun.ta
+    O.I.proistamenos.mou.symperiferetai.stin.prosopiki.tou.tis.zoi.m
+    O.I.proistamenos.mou.exei.sto.myalo.tou.tis.to.symferon.ton.erga
+    O.I.proistamenos.mou.pairnei.dikaies.kai.isorropimenes.apofaseis
+    O.I.proistamenos.mou.einai.axios.empistosynis
+    O.I.proistamenos.mou.syzitaei.themata.epixeirimatikis.ithikis.i
+    O.I.proistamenos.mou.dinei.to.paradeigma.gia.to.pos.prepei.na.gi
+    O.I.proistamenos.mou.orizei.tin.epityxia.oxi.mono.apo.ta.apotele
+    O.I.proistamenos.mou.otan.pairnei.apofaseis..rota..Poio.einai.to
+  /SCALE('Ethical Leadership') ALL
+  /MODEL=ALPHA
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+RELIABILITY
+  /VARIABLES=O.I.proistamenos.mou.psaxnei.panta.nees.eykairies.gia.ton.organi
+    O.I.proistamenos.mou.parousiazei.mia.endiaferousa.eikona.gia.to
+    O.I.proistamenos.mou.exei.xekathari.antilipsi.gia.to.pou.kateyth
+    O.I.proistamenos.mou.empneei.tous.allous.me.ta.plana.tou.tis.gia
+    O.I.proistamenos.mou.katafernei.na.kanei.tous.allous.na.desmeyto
+    O.I.proistamenos.mou.igeitai.mesa.apo.tis.praxeis.tou.tis.kai.ox
+    O.I.proistamenos.mou.apotelei.ena.kalo.protypo.gia.na.akoloutho
+    O.I.proistamenos.mou.igeitai.meso.tou.paradeigmatos
+    O.I.proistamenos.mou.entharrynei.ti.synergasia.metaxy.ton.omadon
+    O.I.proistamenos.mou.entharrynei.tous.ergazomenous.na.leitourgou
+    O.I.proistamenos.mou.parakinei.tin.omada.na.synergazetai.gia.ton
+    O.I.proistamenos.mou.kalliergei.omadiko.pneyma.kai.synergatiki.s
+    O.I.proistamenos.mou.deixnei.oti.exei.ypsiles.prosdokies.apo.ema
+    O.I.proistamenos.mou.epimenei.na.exoume.mono.tin.kalyteri.dynati
+    O.I.proistamenos.mou.den.symbibazetai.me.tipota.ligotero.apo.to
+    O.I.proistamenos.mou.energei.xoris.na.lambanei.ypopsi.ta.synaist
+    O.I.proistamenos.mou.deixnei.sebasmo.gia.ta.prosopika.mou.synais
+    O.I.proistamenos.mou.symperiferetai.me.tropo.pou.lambanei.ypopsi
+    O.I.proistamenos.mou.me.antimetopizei.xoris.na.lambanei.ypopsi.t
+    O.I.proistamenos.mou.me.exei.parakinisei.na.xanaskefto.ton.tropo
+    O.I.proistamenos.mou.exei.idees.pou.me.exoun.prokalesei.na.epane
+    O.I.proistamenos.mou.me.prokalei.na.skefto.palia.problimata.me.n
+    O.I.proistamenos.mou.thetei.erotiseis.pou.me.othoun.na.skefto
+  /SCALE('Transformational Leadership') ALL
+  /MODEL=ALPHA
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+RELIABILITY
+  /VARIABLES=O.I.proistamenos.mou.zita.anatrofodotisi.gia.na.beltiosei.ton.tr
+    O.I.proistamenos.mou.ekfrazei.me.safineia.ti.ennoei
+    O.I.proistamenos.mou.deixnei.synepeia.metaxy.ton.pepoithiseon.to
+    O.I.proistamenos.mou.zita.idees.pou.amfisbitoun.tis.basikes.tou
+    O.I.proistamenos.mou.perigrafei.me.akribeia.ton.tropo.pou.oi.all
+    O.I.proistamenos.mou.anagnorizei.ta.lathi.tou.tis.otan.symbainou
+    O.I.proistamenos.mou.basizetai.stis.basikes.tou.tis.pepoithiseis
+    O.I.proistamenos.mou.akouei.prosektika.diaforetikes.apopseis.pri
+    O.I.proistamenos.mou.deixnei.oti.katanoei.ta.dynata.kai.ta.adyna
+    O.I.proistamenos.mou.moirazetai.anoixta.plirofories.me.tous.allo
+    O.I.proistamenos.mou.antisteketai.stis.pieseis.na.kanei.pragmata
+    O.I.proistamenos.mou.analyei.antikeimenika.ta.sxetika.dedomena.p
+    O.I.proistamenos.mou.exei.xekathari.epignosi.tis.epidrasis.pou.a
+    O.I.proistamenos.mou.ekfrazei.kathara.tis.idees.kai.tis.skepseis
+    O.I.proistamenos.mou.kathodigeitai.stis.praxeis.tou.tis.apo.esot
+    O.I.proistamenos.mou.entharrynei.tous.allous.na.ekfrazoun.antith
+  /SCALE('Authentic Leadership2') ALL
+  /MODEL=ALPHA
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+
+RELIABILITY
+  /VARIABLES=
+    O.I.proistamenos.mou.ekfrazei.me.safineia.ti.ennoei
+    O.I.proistamenos.mou.deixnei.synepeia.metaxy.ton.pepoithiseon.to
+    O.I.proistamenos.mou.zita.idees.pou.amfisbitoun.tis.basikes.tou
+    O.I.proistamenos.mou.perigrafei.me.akribeia.ton.tropo.pou.oi.all
+    O.I.proistamenos.mou.basizetai.stis.basikes.tou.tis.pepoithiseis
+    O.I.proistamenos.mou.akouei.prosektika.diaforetikes.apopseis.pri
+    O.I.proistamenos.mou.deixnei.oti.katanoei.ta.dynata.kai.ta.adyna
+    O.I.proistamenos.mou.moirazetai.anoixta.plirofories.me.tous.allo
+    O.I.proistamenos.mou.antisteketai.stis.pieseis.na.kanei.pragmata
+    O.I.proistamenos.mou.analyei.antikeimenika.ta.sxetika.dedomena.p
+    O.I.proistamenos.mou.exei.xekathari.epignosi.tis.epidrasis.pou.a
+    O.I.proistamenos.mou.ekfrazei.kathara.tis.idees.kai.tis.skepseis
+    O.I.proistamenos.mou.kathodigeitai.stis.praxeis.tou.tis.apo.esot
+    O.I.proistamenos.mou.entharrynei.tous.allous.na.ekfrazoun.antith
+  /SCALE('Authentic Leadership') ALL
+  /MODEL=ALPHA
+  /STATISTICS=DESCRIPTIVE SCALE CORR COV
+  /SUMMARY=TOTAL MEANS VARIANCE.
+
+
+SPLIT FILE OFF.
+
+
+
+
+GRAPH 
+  /HISTOGRAM(NORMAL)=ELS.Mean.score.
+
+NPAR TESTS 
+  /K-S(NORMAL)=ELS.Mean.score 
+  /STATISTICS DESCRIPTIVES QUARTILES 
+  /MISSING ANALYSIS.
+
+GRAPH 
+  /HISTOGRAM(NORMAL)=SA.Mean.
+
+NPAR TESTS 
+  /K-S(NORMAL)=SA.Mean
+  /STATISTICS DESCRIPTIVES QUARTILES 
+  /MISSING ANALYSIS.
+
+GRAPH 
+  /HISTOGRAM(NORMAL)=SA.Mean2.
+
+NPAR TESTS 
+  /K-S(NORMAL)=SA.Mean2 
+  /STATISTICS DESCRIPTIVES QUARTILES 
+  /MISSING ANALYSIS.
+
+GRAPH 
+  /HISTOGRAM(NORMAL)=RT.Mean.
+
+NPAR TESTS 
+  /K-S(NORMAL)=RT.Mean 
+  /STATISTICS DESCRIPTIVES QUARTILES 
+  /MISSING ANALYSIS.
+
+GRAPH 
+  /HISTOGRAM(NORMAL)=RT.Mean2.
+
+NPAR TESTS 
+  /K-S(NORMAL)=RT.Mean2 
+  /STATISTICS DESCRIPTIVES QUARTILES 
+  /MISSING ANALYSIS.
+
+GRAPH 
+  /HISTOGRAM(NORMAL)=BP.Mean.
+
+NPAR TESTS 
+  /K-S(NORMAL)=BP.Mean 
+  /STATISTICS DESCRIPTIVES QUARTILES 
+  /MISSING ANALYSIS.
+
+GRAPH 
+  /HISTOGRAM(NORMAL)=IM.Mean.
+
+NPAR TESTS 
+  /K-S(NORMAL)=IM.Mean 
+  /STATISTICS DESCRIPTIVES QUARTILES 
+  /MISSING ANALYSIS.
+
+GRAPH 
+  /HISTOGRAM(NORMAL)=Intellectual.stimulation.Mean.
+
+NPAR TESTS 
+  /K-S(NORMAL)=Intellectual.stimulation.Mean 
+  /STATISTICS DESCRIPTIVES QUARTILES 
+  /MISSING ANALYSIS.
+
+GRAPH 
+  /HISTOGRAM(NORMAL)=Providing.individualized.support.Mean.
+
+NPAR TESTS 
+  /K-S(NORMAL)=Providing.individualized.support.Mean 
+  /STATISTICS DESCRIPTIVES QUARTILES 
+  /MISSING ANALYSIS.
+
+GRAPH 
+  /HISTOGRAM(NORMAL)=High.performance.expectations.Mean.
+
+NPAR TESTS 
+  /K-S(NORMAL)=High.performance.expectations.Mean 
+  /STATISTICS DESCRIPTIVES QUARTILES 
+  /MISSING ANALYSIS.
+
+GRAPH 
+  /HISTOGRAM(NORMAL)=Fostering.the.acceptance.of.group.goals.Mean.
+
+NPAR TESTS 
+  /K-S(NORMAL)=Fostering.the.acceptance.of.group.goals.Mean 
+  /STATISTICS DESCRIPTIVES QUARTILES 
+  /MISSING ANALYSIS.
+
+GRAPH 
+  /HISTOGRAM(NORMAL)=Articulatin.a.vision.Mean.
+
+NPAR TESTS 
+  /K-S(NORMAL)=Articulatin.a.vision.Mean 
+  /STATISTICS DESCRIPTIVES QUARTILES 
+  /MISSING ANALYSIS.
+
+GRAPH 
+  /HISTOGRAM(NORMAL)=Providing.an.appropriate.model.Mean.
+
+NPAR TESTS 
+  /K-S(NORMAL)=Providing.an.appropriate.model.Mean 
+  /STATISTICS DESCRIPTIVES QUARTILES 
+  /MISSING ANALYSIS.
+
+DESCRIPTIVES VARIABLES= SA.Mean2 RT.Mean2 
+    ELS.Mean.score SA.Mean RT.Mean BP.Mean IM.Mean Intellectual.stimulation.Mean 
+    Providing.individualized.support.Mean High.performance.expectations.Mean 
+    Fostering.the.acceptance.of.group.goals.Mean Articulatin.a.vision.Mean 
+    Providing.an.appropriate.model.Mean 
+  /STATISTICS=MEAN STDDEV MIN MAX KURTOSIS SKEWNESS.
+
+EXAMINE VARIABLES=SA.Mean2 RT.Mean2 
+    ELS.Mean.score SA.Mean RT.Mean BP.Mean IM.Mean Intellectual.stimulation.Mean 
+    Providing.individualized.support.Mean High.performance.expectations.Mean 
+    Fostering.the.acceptance.of.group.goals.Mean Articulatin.a.vision.Mean 
+    Providing.an.appropriate.model.Mean 
+  /PLOT BOXPLOT HISTOGRAM NPPLOT 
+  /COMPARE GROUPS 
+  /STATISTICS DESCRIPTIVES 
+  /CINTERVAL 95 
+  /MISSING LISTWISE 
+  /NOTOTAL.
+
+
+SORT CASES  BY Poiotita.Dedomenon. 
+SPLIT FILE SEPARATE BY Poiotita.Dedomenon.
+
+GRAPH 
+  /HISTOGRAM(NORMAL)=ELS.Mean.score.
+
+NPAR TESTS 
+  /K-S(NORMAL)=ELS.Mean.score 
+  /STATISTICS DESCRIPTIVES QUARTILES 
+  /MISSING ANALYSIS.
+
+GRAPH 
+  /HISTOGRAM(NORMAL)=SA.Mean.
+
+NPAR TESTS 
+  /K-S(NORMAL)=SA.Mean
+  /STATISTICS DESCRIPTIVES QUARTILES 
+  /MISSING ANALYSIS.
+
+GRAPH 
+  /HISTOGRAM(NORMAL)=SA.Mean2.
+
+NPAR TESTS 
+  /K-S(NORMAL)=SA.Mean2 
+  /STATISTICS DESCRIPTIVES QUARTILES 
+  /MISSING ANALYSIS.
+
+GRAPH 
+  /HISTOGRAM(NORMAL)=RT.Mean.
+
+NPAR TESTS 
+  /K-S(NORMAL)=RT.Mean 
+  /STATISTICS DESCRIPTIVES QUARTILES 
+  /MISSING ANALYSIS.
+
+GRAPH 
+  /HISTOGRAM(NORMAL)=RT.Mean2.
+
+NPAR TESTS 
+  /K-S(NORMAL)=RT.Mean2 
+  /STATISTICS DESCRIPTIVES QUARTILES 
+  /MISSING ANALYSIS.
+
+GRAPH 
+  /HISTOGRAM(NORMAL)=BP.Mean.
+
+NPAR TESTS 
+  /K-S(NORMAL)=BP.Mean 
+  /STATISTICS DESCRIPTIVES QUARTILES 
+  /MISSING ANALYSIS.
+
+GRAPH 
+  /HISTOGRAM(NORMAL)=IM.Mean.
+
+NPAR TESTS 
+  /K-S(NORMAL)=IM.Mean 
+  /STATISTICS DESCRIPTIVES QUARTILES 
+  /MISSING ANALYSIS.
+
+GRAPH 
+  /HISTOGRAM(NORMAL)=Intellectual.stimulation.Mean.
+
+NPAR TESTS 
+  /K-S(NORMAL)=Intellectual.stimulation.Mean 
+  /STATISTICS DESCRIPTIVES QUARTILES 
+  /MISSING ANALYSIS.
+
+GRAPH 
+  /HISTOGRAM(NORMAL)=Providing.individualized.support.Mean.
+
+NPAR TESTS 
+  /K-S(NORMAL)=Providing.individualized.support.Mean 
+  /STATISTICS DESCRIPTIVES QUARTILES 
+  /MISSING ANALYSIS.
+
+GRAPH 
+  /HISTOGRAM(NORMAL)=High.performance.expectations.Mean.
+
+NPAR TESTS 
+  /K-S(NORMAL)=High.performance.expectations.Mean 
+  /STATISTICS DESCRIPTIVES QUARTILES 
+  /MISSING ANALYSIS.
+
+GRAPH 
+  /HISTOGRAM(NORMAL)=Fostering.the.acceptance.of.group.goals.Mean.
+
+NPAR TESTS 
+  /K-S(NORMAL)=Fostering.the.acceptance.of.group.goals.Mean 
+  /STATISTICS DESCRIPTIVES QUARTILES 
+  /MISSING ANALYSIS.
+
+GRAPH 
+  /HISTOGRAM(NORMAL)=Articulatin.a.vision.Mean.
+
+NPAR TESTS 
+  /K-S(NORMAL)=Articulatin.a.vision.Mean 
+  /STATISTICS DESCRIPTIVES QUARTILES 
+  /MISSING ANALYSIS.
+
+GRAPH 
+  /HISTOGRAM(NORMAL)=Providing.an.appropriate.model.Mean.
+
+NPAR TESTS 
+  /K-S(NORMAL)=Providing.an.appropriate.model.Mean 
+  /STATISTICS DESCRIPTIVES QUARTILES 
+  /MISSING ANALYSIS.
+
+DESCRIPTIVES VARIABLES= SA.Mean2 RT.Mean2 
+    ELS.Mean.score SA.Mean RT.Mean BP.Mean IM.Mean Intellectual.stimulation.Mean 
+    Providing.individualized.support.Mean High.performance.expectations.Mean 
+    Fostering.the.acceptance.of.group.goals.Mean Articulatin.a.vision.Mean 
+    Providing.an.appropriate.model.Mean 
+  /STATISTICS=MEAN STDDEV MIN MAX KURTOSIS SKEWNESS.
+
+EXAMINE VARIABLES= SA.Mean2 RT.Mean2 
+    ELS.Mean.score SA.Mean RT.Mean BP.Mean IM.Mean Intellectual.stimulation.Mean 
+    Providing.individualized.support.Mean High.performance.expectations.Mean 
+    Fostering.the.acceptance.of.group.goals.Mean Articulatin.a.vision.Mean 
+    Providing.an.appropriate.model.Mean 
+  /PLOT BOXPLOT HISTOGRAM NPPLOT 
+  /COMPARE GROUPS 
+  /STATISTICS DESCRIPTIVES 
+  /CINTERVAL 95 
+  /MISSING LISTWISE 
+  /NOTOTAL.
+
+
+
+SPLIT FILE OFF.
+
+
+
+CORRELATIONS 
+  /VARIABLES=ELS.Mean.score SA.Mean RT.Mean BP.Mean IM.Mean Intellectual.stimulation.Mean 
+    Providing.individualized.support.Mean High.performance.expectations.Mean 
+    Fostering.the.acceptance.of.group.goals.Mean Articulatin.a.vision.Mean 
+    Providing.an.appropriate.model.Mean SA.Mean2 RT.Mean2 
+  /PRINT=TWOTAIL NOSIG 
+  /MISSING=PAIRWISE.
+
+NONPAR CORR 
+  /VARIABLES=ELS.Mean.score SA.Mean RT.Mean BP.Mean IM.Mean Intellectual.stimulation.Mean 
+    Providing.individualized.support.Mean High.performance.expectations.Mean 
+    Fostering.the.acceptance.of.group.goals.Mean Articulatin.a.vision.Mean 
+    Providing.an.appropriate.model.Mean SA.Mean2 RT.Mean2 
+  /PRINT=SPEARMAN TWOTAIL NOSIG 
+  /MISSING=PAIRWISE.
+
+SORT CASES  BY Poiotita.Dedomenon. 
+SPLIT FILE SEPARATE BY Poiotita.Dedomenon.
+CORRELATIONS 
+  /VARIABLES=ELS.Mean.score SA.Mean RT.Mean BP.Mean IM.Mean Intellectual.stimulation.Mean 
+    Providing.individualized.support.Mean High.performance.expectations.Mean 
+    Fostering.the.acceptance.of.group.goals.Mean Articulatin.a.vision.Mean 
+    Providing.an.appropriate.model.Mean SA.Mean2 RT.Mean2 
+  /PRINT=TWOTAIL NOSIG 
+  /MISSING=PAIRWISE.
+
+NONPAR CORR 
+  /VARIABLES=ELS.Mean.score SA.Mean RT.Mean BP.Mean IM.Mean Intellectual.stimulation.Mean 
+    Providing.individualized.support.Mean High.performance.expectations.Mean 
+    Fostering.the.acceptance.of.group.goals.Mean Articulatin.a.vision.Mean 
+    Providing.an.appropriate.model.Mean SA.Mean2 RT.Mean2 
+  /PRINT=SPEARMAN TWOTAIL NOSIG 
+  /MISSING=PAIRWISE.
+
+SPLIT FILE OFF.
+
+
+
+
+
+* Chart Builder. 
+GGRAPH 
+  /GRAPHDATASET NAME="graphdataset" VARIABLES=ELS.Mean.score[name="ELS_Mean_score"] 
+    Sbscale.Total.Satisfaction[name="Sbscale_Total_Satisfaction"] MISSING=LISTWISE REPORTMISSING=NO 
+  /GRAPHSPEC SOURCE=INLINE. 
+BEGIN GPL 
+  SOURCE: s=userSource(id("graphdataset")) 
+  DATA: ELS_Mean_score=col(source(s), name("ELS_Mean_score")) 
+  DATA: Sbscale_Total_Satisfaction=col(source(s), name("Sbscale_Total_Satisfaction")) 
+  GUIDE: axis(dim(1), label("ELS.Mean.score")) 
+  GUIDE: axis(dim(2), label("Sbscale.Total.Satisfaction")) 
+  ELEMENT: point(position(ELS_Mean_score*Sbscale_Total_Satisfaction)) 
+END GPL.
+
+* Chart Builder.
+GGRAPH
+  /GRAPHDATASET NAME="graphdataset" VARIABLES=SA.Mean[name="SA_Mean"]
+    Sbscale.Total.Satisfaction[name="Sbscale_Total_Satisfaction"] MISSING=LISTWISE REPORTMISSING=NO
+  /GRAPHSPEC SOURCE=INLINE.
+BEGIN GPL
+  SOURCE: s=userSource(id("graphdataset"))
+  DATA: SA_Mean=col(source(s), name("SA_Mean"))
+  DATA: Sbscale_Total_Satisfaction=col(source(s), name("Sbscale_Total_Satisfaction"))
+  GUIDE: axis(dim(1), label("SA.Mean"))
+  GUIDE: axis(dim(2), label("Sbscale.Total.Satisfaction"))
+  ELEMENT: point(position(SA_Mean*Sbscale_Total_Satisfaction))
+END GPL.
+
+* Chart Builder.
+GGRAPH
+  /GRAPHDATASET NAME="graphdataset" VARIABLES=RT.Mean[name="RT_Mean"]
+    Sbscale.Total.Satisfaction[name="Sbscale_Total_Satisfaction"] MISSING=LISTWISE REPORTMISSING=NO
+  /GRAPHSPEC SOURCE=INLINE.
+BEGIN GPL
+  SOURCE: s=userSource(id("graphdataset"))
+  DATA: RT_Mean=col(source(s), name("RT_Mean"))
+  DATA: Sbscale_Total_Satisfaction=col(source(s), name("Sbscale_Total_Satisfaction"))
+  GUIDE: axis(dim(1), label("RT.Mean"))
+  GUIDE: axis(dim(2), label("Sbscale.Total.Satisfaction"))
+  ELEMENT: point(position(RT_Mean*Sbscale_Total_Satisfaction))
+END GPL.
+
+* Chart Builder.
+GGRAPH
+  /GRAPHDATASET NAME="graphdataset" VARIABLES=BP.Mean[name="BP_Mean"]
+    Sbscale.Total.Satisfaction[name="Sbscale_Total_Satisfaction"] MISSING=LISTWISE REPORTMISSING=NO
+  /GRAPHSPEC SOURCE=INLINE.
+BEGIN GPL
+  SOURCE: s=userSource(id("graphdataset"))
+  DATA: BP_Mean=col(source(s), name("BP_Mean"))
+  DATA: Sbscale_Total_Satisfaction=col(source(s), name("Sbscale_Total_Satisfaction"))
+  GUIDE: axis(dim(1), label("BP.Mean"))
+  GUIDE: axis(dim(2), label("Sbscale.Total.Satisfaction"))
+  ELEMENT: point(position(BP_Mean*Sbscale_Total_Satisfaction))
+END GPL.
+
+* Chart Builder.
+GGRAPH
+  /GRAPHDATASET NAME="graphdataset" VARIABLES=IM.Mean[name="IM_Mean"]
+    Sbscale.Total.Satisfaction[name="Sbscale_Total_Satisfaction"] MISSING=LISTWISE REPORTMISSING=NO
+  /GRAPHSPEC SOURCE=INLINE.
+BEGIN GPL
+  SOURCE: s=userSource(id("graphdataset"))
+  DATA: IM_Mean=col(source(s), name("IM_Mean"))
+  DATA: Sbscale_Total_Satisfaction=col(source(s), name("Sbscale_Total_Satisfaction"))
+  GUIDE: axis(dim(1), label("IM.Mean"))
+  GUIDE: axis(dim(2), label("Sbscale.Total.Satisfaction"))
+  ELEMENT: point(position(IM_Mean*Sbscale_Total_Satisfaction))
+END GPL.
+
+* Chart Builder.
+GGRAPH
+  /GRAPHDATASET NAME="graphdataset" VARIABLES=Intellectual.stimulation.Mean[name=
+    "Intellectual_stimulation_Mean"] Sbscale.Total.Satisfaction[name="Sbscale_Total_Satisfaction"]
+    MISSING=LISTWISE REPORTMISSING=NO
+  /GRAPHSPEC SOURCE=INLINE.
+BEGIN GPL
+  SOURCE: s=userSource(id("graphdataset"))
+  DATA: Intellectual_stimulation_Mean=col(source(s), name("Intellectual_stimulation_Mean"))
+  DATA: Sbscale_Total_Satisfaction=col(source(s), name("Sbscale_Total_Satisfaction"))
+  GUIDE: axis(dim(1), label("Intellectual.stimulation.Mean"))
+  GUIDE: axis(dim(2), label("Sbscale.Total.Satisfaction"))
+  ELEMENT: point(position(Intellectual_stimulation_Mean*Sbscale_Total_Satisfaction))
+END GPL.
+
+* Chart Builder.
+GGRAPH
+  /GRAPHDATASET NAME="graphdataset" VARIABLES=Providing.individualized.support.Mean[name=
+    "Providing_individualized_support_Mean"]
+    Sbscale.Total.Satisfaction[name="Sbscale_Total_Satisfaction"] MISSING=LISTWISE REPORTMISSING=NO
+  /GRAPHSPEC SOURCE=INLINE.
+BEGIN GPL
+  SOURCE: s=userSource(id("graphdataset"))
+  DATA: Providing_individualized_support_Mean=col(source(s),
+    name("Providing_individualized_support_Mean"))
+  DATA: Sbscale_Total_Satisfaction=col(source(s), name("Sbscale_Total_Satisfaction"))
+  GUIDE: axis(dim(1), label("Providing.individualized.support.Mean"))
+  GUIDE: axis(dim(2), label("Sbscale.Total.Satisfaction"))
+  ELEMENT: point(position(Providing_individualized_support_Mean*Sbscale_Total_Satisfaction))
+END GPL.
+
+* Chart Builder.
+GGRAPH
+  /GRAPHDATASET NAME="graphdataset" VARIABLES=High.performance.expectations.Mean[name=
+    "High_performance_expectations_Mean"] Sbscale.Total.Satisfaction[name="Sbscale_Total_Satisfaction"]
+    MISSING=LISTWISE REPORTMISSING=NO
+  /GRAPHSPEC SOURCE=INLINE.
+BEGIN GPL
+  SOURCE: s=userSource(id("graphdataset"))
+  DATA: High_performance_expectations_Mean=col(source(s),
+    name("High_performance_expectations_Mean"))
+  DATA: Sbscale_Total_Satisfaction=col(source(s), name("Sbscale_Total_Satisfaction"))
+  GUIDE: axis(dim(1), label("High.performance.expectations.Mean"))
+  GUIDE: axis(dim(2), label("Sbscale.Total.Satisfaction"))
+  ELEMENT: point(position(High_performance_expectations_Mean*Sbscale_Total_Satisfaction))
+END GPL.
+
+* Chart Builder.
+GGRAPH
+  /GRAPHDATASET NAME="graphdataset" VARIABLES=Fostering.the.acceptance.of.group.goals.Mean[name=
+    "Fostering_the_acceptance_of_group_goals_Mean"]
+    Sbscale.Total.Satisfaction[name="Sbscale_Total_Satisfaction"] MISSING=LISTWISE REPORTMISSING=NO
+  /GRAPHSPEC SOURCE=INLINE.
+BEGIN GPL
+  SOURCE: s=userSource(id("graphdataset"))
+  DATA: Fostering_the_acceptance_of_group_goals_Mean=col(source(s),
+    name("Fostering_the_acceptance_of_group_goals_Mean"))
+  DATA: Sbscale_Total_Satisfaction=col(source(s), name("Sbscale_Total_Satisfaction"))
+  GUIDE: axis(dim(1), label("Fostering.the.acceptance.of.group.goals.Mean"))
+  GUIDE: axis(dim(2), label("Sbscale.Total.Satisfaction"))
+  ELEMENT: point(position(Fostering_the_acceptance_of_group_goals_Mean*Sbscale_Total_Satisfaction))
+END GPL.
+
+* Chart Builder.
+GGRAPH
+  /GRAPHDATASET NAME="graphdataset" VARIABLES=Articulatin.a.vision.Mean[name=
+    "Articulatin_a_vision_Mean"] Sbscale.Total.Satisfaction[name="Sbscale_Total_Satisfaction"]
+    MISSING=LISTWISE REPORTMISSING=NO
+  /GRAPHSPEC SOURCE=INLINE.
+BEGIN GPL
+  SOURCE: s=userSource(id("graphdataset"))
+  DATA: Articulatin_a_vision_Mean=col(source(s), name("Articulatin_a_vision_Mean"))
+  DATA: Sbscale_Total_Satisfaction=col(source(s), name("Sbscale_Total_Satisfaction"))
+  GUIDE: axis(dim(1), label("Articulatin.a.vision.Mean"))
+  GUIDE: axis(dim(2), label("Sbscale.Total.Satisfaction"))
+  ELEMENT: point(position(Articulatin_a_vision_Mean*Sbscale_Total_Satisfaction))
+END GPL.
+
+* Chart Builder.
+GGRAPH
+  /GRAPHDATASET NAME="graphdataset" VARIABLES=Providing.an.appropriate.model.Mean[name=
+    "Providing_an_appropriate_model_Mean"] Sbscale.Total.Satisfaction[name=
+    "Sbscale_Total_Satisfaction"] MISSING=LISTWISE REPORTMISSING=NO
+  /GRAPHSPEC SOURCE=INLINE.
+BEGIN GPL
+  SOURCE: s=userSource(id("graphdataset"))
+  DATA: Providing_an_appropriate_model_Mean=col(source(s),
+    name("Providing_an_appropriate_model_Mean"))
+  DATA: Sbscale_Total_Satisfaction=col(source(s), name("Sbscale_Total_Satisfaction"))
+  GUIDE: axis(dim(1), label("Providing.an.appropriate.model.Mean"))
+  GUIDE: axis(dim(2), label("Sbscale.Total.Satisfaction"))
+  ELEMENT: point(position(Providing_an_appropriate_model_Mean*Sbscale_Total_Satisfaction))
+END GPL.
+
+* Chart Builder.
+GGRAPH
+  /GRAPHDATASET NAME="graphdataset" VARIABLES=SA.Mean2[name="SA_Mean2"]
+    Sbscale.Total.Satisfaction[name="Sbscale_Total_Satisfaction"] MISSING=LISTWISE REPORTMISSING=NO
+  /GRAPHSPEC SOURCE=INLINE.
+BEGIN GPL
+  SOURCE: s=userSource(id("graphdataset"))
+  DATA: SA_Mean2=col(source(s), name("SA_Mean2"))
+  DATA: Sbscale_Total_Satisfaction=col(source(s), name("Sbscale_Total_Satisfaction"))
+  GUIDE: axis(dim(1), label("SA.Mean2"))
+  GUIDE: axis(dim(2), label("Sbscale.Total.Satisfaction"))
+  ELEMENT: point(position(SA_Mean2*Sbscale_Total_Satisfaction))
+END GPL.
+
+* Chart Builder.
+GGRAPH
+  /GRAPHDATASET NAME="graphdataset" VARIABLES=RT.Mean2[name="RT_Mean2"]
+    Sbscale.Total.Satisfaction[name="Sbscale_Total_Satisfaction"] MISSING=LISTWISE REPORTMISSING=NO
+  /GRAPHSPEC SOURCE=INLINE.
+BEGIN GPL
+  SOURCE: s=userSource(id("graphdataset"))
+  DATA: RT_Mean2=col(source(s), name("RT_Mean2"))
+  DATA: Sbscale_Total_Satisfaction=col(source(s), name("Sbscale_Total_Satisfaction"))
+  GUIDE: axis(dim(1), label("RT.Mean2"))
+  GUIDE: axis(dim(2), label("Sbscale.Total.Satisfaction"))
+  ELEMENT: point(position(RT_Mean2*Sbscale_Total_Satisfaction))
+END GPL.
+
+
+
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER Ilikia Fylo Epipedo.Spoudon Ergasiaki.empeiria Ergasiakos.Klados Topos.Ergasias2
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER ELS.Mean.score
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER SA.Mean RT.Mean BP.Mean IM.Mean
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER BP.Mean IM.Mean SA.Mean2 RT.Mean2
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER Intellectual.stimulation.Mean Providing.individualized.support.Mean
+    High.performance.expectations.Mean Fostering.the.acceptance.of.group.goals.Mean
+    Articulatin.a.vision.Mean Providing.an.appropriate.model.Mean
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER Intellectual.stimulation.Mean Providing.individualized.support.Mean
+    High.performance.expectations.Mean Fostering.the.acceptance.of.group.goals.Mean
+    Articulatin.a.vision.Mean Providing.an.appropriate.model.Mean ELS.Mean.score SA.Mean RT.Mean
+    BP.Mean IM.Mean
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER Intellectual.stimulation.Mean Providing.individualized.support.Mean
+    High.performance.expectations.Mean Fostering.the.acceptance.of.group.goals.Mean
+    Articulatin.a.vision.Mean Providing.an.appropriate.model.Mean ELS.Mean.score BP.Mean IM.Mean
+    SA.Mean2 RT.Mean2
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+ 
+REGRESSION 
+  /MISSING LISTWISE 
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL CHANGE 
+  /CRITERIA=PIN(.05) POUT(.10) 
+  /NOORIGIN 
+  /DEPENDENT Sbscale.Total.Satisfaction 
+  /METHOD=ENTER ELS.Mean.score ALI.TOTAL.MEAN.SCORE TLI.TOTAL.MEAN.SCORE 
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction) 
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL CHANGE
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER ELS.Mean.score TLI.TOTAL.MEAN.SCORE ALI2.TOTAL.MEAN.SCORE
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL CHANGE
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER TLI.TOTAL.MEAN.SCORE
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL CHANGE
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER ALI.TOTAL.MEAN.SCORE
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL CHANGE
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER ALI2.TOTAL.MEAN.SCORE
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+
+
+
+
+SORT CASES  BY Poiotita.Dedomenon. 
+SPLIT FILE SEPARATE BY Poiotita.Dedomenon.
+
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER Ilikia Fylo Epipedo.Spoudon Ergasiaki.empeiria Ergasiakos.Klados Topos.Ergasias2
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER ELS.Mean.score
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER SA.Mean RT.Mean BP.Mean IM.Mean
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER BP.Mean IM.Mean SA.Mean2 RT.Mean2
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER Intellectual.stimulation.Mean Providing.individualized.support.Mean
+    High.performance.expectations.Mean Fostering.the.acceptance.of.group.goals.Mean
+    Articulatin.a.vision.Mean Providing.an.appropriate.model.Mean
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER Intellectual.stimulation.Mean Providing.individualized.support.Mean
+    High.performance.expectations.Mean Fostering.the.acceptance.of.group.goals.Mean
+    Articulatin.a.vision.Mean Providing.an.appropriate.model.Mean ELS.Mean.score SA.Mean RT.Mean
+    BP.Mean IM.Mean
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER Intellectual.stimulation.Mean Providing.individualized.support.Mean
+    High.performance.expectations.Mean Fostering.the.acceptance.of.group.goals.Mean
+    Articulatin.a.vision.Mean Providing.an.appropriate.model.Mean ELS.Mean.score BP.Mean IM.Mean
+    SA.Mean2 RT.Mean2
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+ 
+REGRESSION 
+  /MISSING LISTWISE 
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL CHANGE 
+  /CRITERIA=PIN(.05) POUT(.10) 
+  /NOORIGIN 
+  /DEPENDENT Sbscale.Total.Satisfaction 
+  /METHOD=ENTER ELS.Mean.score ALI.TOTAL.MEAN.SCORE TLI.TOTAL.MEAN.SCORE 
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction) 
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL CHANGE
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER ELS.Mean.score TLI.TOTAL.MEAN.SCORE ALI2.TOTAL.MEAN.SCORE
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL CHANGE
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER TLI.TOTAL.MEAN.SCORE
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL CHANGE
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER ALI.TOTAL.MEAN.SCORE
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL CHANGE
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER ALI2.TOTAL.MEAN.SCORE
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+
+
+
+SPLIT FILE OFF.
+
+SORT CASES  BY Ilikia.
+SPLIT FILE SEPARATE BY Ilikia.
+
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER Fylo Epipedo.Spoudon Ergasiaki.empeiria Ergasiakos.Klados Topos.Ergasias2
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER ELS.Mean.score
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER SA.Mean RT.Mean BP.Mean IM.Mean
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER BP.Mean IM.Mean SA.Mean2 RT.Mean2
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER Intellectual.stimulation.Mean Providing.individualized.support.Mean
+    High.performance.expectations.Mean Fostering.the.acceptance.of.group.goals.Mean
+    Articulatin.a.vision.Mean Providing.an.appropriate.model.Mean
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER Intellectual.stimulation.Mean Providing.individualized.support.Mean
+    High.performance.expectations.Mean Fostering.the.acceptance.of.group.goals.Mean
+    Articulatin.a.vision.Mean Providing.an.appropriate.model.Mean ELS.Mean.score SA.Mean RT.Mean
+    BP.Mean IM.Mean
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER Intellectual.stimulation.Mean Providing.individualized.support.Mean
+    High.performance.expectations.Mean Fostering.the.acceptance.of.group.goals.Mean
+    Articulatin.a.vision.Mean Providing.an.appropriate.model.Mean ELS.Mean.score BP.Mean IM.Mean
+    SA.Mean2 RT.Mean2
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+ 
+REGRESSION 
+  /MISSING LISTWISE 
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL CHANGE 
+  /CRITERIA=PIN(.05) POUT(.10) 
+  /NOORIGIN 
+  /DEPENDENT Sbscale.Total.Satisfaction 
+  /METHOD=ENTER ELS.Mean.score ALI.TOTAL.MEAN.SCORE TLI.TOTAL.MEAN.SCORE 
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction) 
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL CHANGE
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER ELS.Mean.score TLI.TOTAL.MEAN.SCORE ALI2.TOTAL.MEAN.SCORE
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL CHANGE
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER TLI.TOTAL.MEAN.SCORE
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL CHANGE
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER ALI.TOTAL.MEAN.SCORE
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL CHANGE
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER ALI2.TOTAL.MEAN.SCORE
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+
+
+
+SPLIT FILE OFF.
+
+
+SORT CASES  BY Fylo.
+SPLIT FILE SEPARATE BY Fylo.
+
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER Ilikia Epipedo.Spoudon Ergasiaki.empeiria Ergasiakos.Klados Topos.Ergasias2
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER ELS.Mean.score
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER SA.Mean RT.Mean BP.Mean IM.Mean
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER BP.Mean IM.Mean SA.Mean2 RT.Mean2
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER Intellectual.stimulation.Mean Providing.individualized.support.Mean
+    High.performance.expectations.Mean Fostering.the.acceptance.of.group.goals.Mean
+    Articulatin.a.vision.Mean Providing.an.appropriate.model.Mean
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER Intellectual.stimulation.Mean Providing.individualized.support.Mean
+    High.performance.expectations.Mean Fostering.the.acceptance.of.group.goals.Mean
+    Articulatin.a.vision.Mean Providing.an.appropriate.model.Mean ELS.Mean.score SA.Mean RT.Mean
+    BP.Mean IM.Mean
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER Intellectual.stimulation.Mean Providing.individualized.support.Mean
+    High.performance.expectations.Mean Fostering.the.acceptance.of.group.goals.Mean
+    Articulatin.a.vision.Mean Providing.an.appropriate.model.Mean ELS.Mean.score BP.Mean IM.Mean
+    SA.Mean2 RT.Mean2
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+ 
+REGRESSION 
+  /MISSING LISTWISE 
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL CHANGE 
+  /CRITERIA=PIN(.05) POUT(.10) 
+  /NOORIGIN 
+  /DEPENDENT Sbscale.Total.Satisfaction 
+  /METHOD=ENTER ELS.Mean.score ALI.TOTAL.MEAN.SCORE TLI.TOTAL.MEAN.SCORE 
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction) 
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL CHANGE
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER ELS.Mean.score TLI.TOTAL.MEAN.SCORE ALI2.TOTAL.MEAN.SCORE
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL CHANGE
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER TLI.TOTAL.MEAN.SCORE
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL CHANGE
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER ALI.TOTAL.MEAN.SCORE
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL CHANGE
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER ALI2.TOTAL.MEAN.SCORE
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+
+
+
+SPLIT FILE OFF.
+
+SORT CASES  BY Epipedo.Spoudon.
+SPLIT FILE SEPARATE BY Epipedo.Spoudon.
+
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER Ilikia Fylo Ergasiaki.empeiria Ergasiakos.Klados Topos.Ergasias2
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER ELS.Mean.score
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER SA.Mean RT.Mean BP.Mean IM.Mean
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER BP.Mean IM.Mean SA.Mean2 RT.Mean2
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER Intellectual.stimulation.Mean Providing.individualized.support.Mean
+    High.performance.expectations.Mean Fostering.the.acceptance.of.group.goals.Mean
+    Articulatin.a.vision.Mean Providing.an.appropriate.model.Mean
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER Intellectual.stimulation.Mean Providing.individualized.support.Mean
+    High.performance.expectations.Mean Fostering.the.acceptance.of.group.goals.Mean
+    Articulatin.a.vision.Mean Providing.an.appropriate.model.Mean ELS.Mean.score SA.Mean RT.Mean
+    BP.Mean IM.Mean
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER Intellectual.stimulation.Mean Providing.individualized.support.Mean
+    High.performance.expectations.Mean Fostering.the.acceptance.of.group.goals.Mean
+    Articulatin.a.vision.Mean Providing.an.appropriate.model.Mean ELS.Mean.score BP.Mean IM.Mean
+    SA.Mean2 RT.Mean2
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+ 
+REGRESSION 
+  /MISSING LISTWISE 
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL CHANGE 
+  /CRITERIA=PIN(.05) POUT(.10) 
+  /NOORIGIN 
+  /DEPENDENT Sbscale.Total.Satisfaction 
+  /METHOD=ENTER ELS.Mean.score ALI.TOTAL.MEAN.SCORE TLI.TOTAL.MEAN.SCORE 
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction) 
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL CHANGE
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER ELS.Mean.score TLI.TOTAL.MEAN.SCORE ALI2.TOTAL.MEAN.SCORE
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL CHANGE
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER TLI.TOTAL.MEAN.SCORE
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL CHANGE
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER ALI.TOTAL.MEAN.SCORE
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL CHANGE
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER ALI2.TOTAL.MEAN.SCORE
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+
+
+
+SPLIT FILE OFF.
+
+SORT CASES  BY Ergasiaki.empeiria.
+SPLIT FILE SEPARATE BY Ergasiaki.empeiria.
+
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER Ilikia Fylo Epipedo.Spoudon Ergasiakos.Klados Topos.Ergasias2
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER ELS.Mean.score
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER SA.Mean RT.Mean BP.Mean IM.Mean
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER BP.Mean IM.Mean SA.Mean2 RT.Mean2
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER Intellectual.stimulation.Mean Providing.individualized.support.Mean
+    High.performance.expectations.Mean Fostering.the.acceptance.of.group.goals.Mean
+    Articulatin.a.vision.Mean Providing.an.appropriate.model.Mean
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER Intellectual.stimulation.Mean Providing.individualized.support.Mean
+    High.performance.expectations.Mean Fostering.the.acceptance.of.group.goals.Mean
+    Articulatin.a.vision.Mean Providing.an.appropriate.model.Mean ELS.Mean.score SA.Mean RT.Mean
+    BP.Mean IM.Mean
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER Intellectual.stimulation.Mean Providing.individualized.support.Mean
+    High.performance.expectations.Mean Fostering.the.acceptance.of.group.goals.Mean
+    Articulatin.a.vision.Mean Providing.an.appropriate.model.Mean ELS.Mean.score BP.Mean IM.Mean
+    SA.Mean2 RT.Mean2
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+ 
+REGRESSION 
+  /MISSING LISTWISE 
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL CHANGE 
+  /CRITERIA=PIN(.05) POUT(.10) 
+  /NOORIGIN 
+  /DEPENDENT Sbscale.Total.Satisfaction 
+  /METHOD=ENTER ELS.Mean.score ALI.TOTAL.MEAN.SCORE TLI.TOTAL.MEAN.SCORE 
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction) 
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL CHANGE
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER ELS.Mean.score TLI.TOTAL.MEAN.SCORE ALI2.TOTAL.MEAN.SCORE
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL CHANGE
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER TLI.TOTAL.MEAN.SCORE
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL CHANGE
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER ALI.TOTAL.MEAN.SCORE
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL CHANGE
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER ALI2.TOTAL.MEAN.SCORE
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+
+
+
+SPLIT FILE OFF.
+
+
+SORT CASES  BY Ergasiakos.Klados.
+SPLIT FILE SEPARATE BY Ergasiakos.Klados.
+
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER Ilikia Fylo Epipedo.Spoudon Ergasiaki.empeiria Topos.Ergasias2
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER ELS.Mean.score
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER SA.Mean RT.Mean BP.Mean IM.Mean
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER BP.Mean IM.Mean SA.Mean2 RT.Mean2
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER Intellectual.stimulation.Mean Providing.individualized.support.Mean
+    High.performance.expectations.Mean Fostering.the.acceptance.of.group.goals.Mean
+    Articulatin.a.vision.Mean Providing.an.appropriate.model.Mean
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER Intellectual.stimulation.Mean Providing.individualized.support.Mean
+    High.performance.expectations.Mean Fostering.the.acceptance.of.group.goals.Mean
+    Articulatin.a.vision.Mean Providing.an.appropriate.model.Mean ELS.Mean.score SA.Mean RT.Mean
+    BP.Mean IM.Mean
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER Intellectual.stimulation.Mean Providing.individualized.support.Mean
+    High.performance.expectations.Mean Fostering.the.acceptance.of.group.goals.Mean
+    Articulatin.a.vision.Mean Providing.an.appropriate.model.Mean ELS.Mean.score BP.Mean IM.Mean
+    SA.Mean2 RT.Mean2
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+ 
+REGRESSION 
+  /MISSING LISTWISE 
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL CHANGE 
+  /CRITERIA=PIN(.05) POUT(.10) 
+  /NOORIGIN 
+  /DEPENDENT Sbscale.Total.Satisfaction 
+  /METHOD=ENTER ELS.Mean.score ALI.TOTAL.MEAN.SCORE TLI.TOTAL.MEAN.SCORE 
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction) 
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL CHANGE
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER ELS.Mean.score TLI.TOTAL.MEAN.SCORE ALI2.TOTAL.MEAN.SCORE
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL CHANGE
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER TLI.TOTAL.MEAN.SCORE
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL CHANGE
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER ALI.TOTAL.MEAN.SCORE
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL CHANGE
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER ALI2.TOTAL.MEAN.SCORE
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+
+
+
+SPLIT FILE OFF.
+
+
+SORT CASES  BY Topos.Ergasias2.
+SPLIT FILE SEPARATE BY Topos.Ergasias2.
+
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER Ilikia Fylo Epipedo.Spoudon Ergasiaki.empeiria Ergasiakos.Klados 
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER ELS.Mean.score
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER SA.Mean RT.Mean BP.Mean IM.Mean
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER BP.Mean IM.Mean SA.Mean2 RT.Mean2
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER Intellectual.stimulation.Mean Providing.individualized.support.Mean
+    High.performance.expectations.Mean Fostering.the.acceptance.of.group.goals.Mean
+    Articulatin.a.vision.Mean Providing.an.appropriate.model.Mean
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER Intellectual.stimulation.Mean Providing.individualized.support.Mean
+    High.performance.expectations.Mean Fostering.the.acceptance.of.group.goals.Mean
+    Articulatin.a.vision.Mean Providing.an.appropriate.model.Mean ELS.Mean.score SA.Mean RT.Mean
+    BP.Mean IM.Mean
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER Intellectual.stimulation.Mean Providing.individualized.support.Mean
+    High.performance.expectations.Mean Fostering.the.acceptance.of.group.goals.Mean
+    Articulatin.a.vision.Mean Providing.an.appropriate.model.Mean ELS.Mean.score BP.Mean IM.Mean
+    SA.Mean2 RT.Mean2
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+ 
+REGRESSION 
+  /MISSING LISTWISE 
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL CHANGE 
+  /CRITERIA=PIN(.05) POUT(.10) 
+  /NOORIGIN 
+  /DEPENDENT Sbscale.Total.Satisfaction 
+  /METHOD=ENTER ELS.Mean.score ALI.TOTAL.MEAN.SCORE TLI.TOTAL.MEAN.SCORE 
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction) 
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL CHANGE
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER ELS.Mean.score TLI.TOTAL.MEAN.SCORE ALI2.TOTAL.MEAN.SCORE
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL CHANGE
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER TLI.TOTAL.MEAN.SCORE
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL CHANGE
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER ALI.TOTAL.MEAN.SCORE
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+REGRESSION
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL CHANGE
+  /CRITERIA=PIN(.05) POUT(.10)
+  /NOORIGIN
+  /DEPENDENT Sbscale.Total.Satisfaction
+  /METHOD=ENTER ALI2.TOTAL.MEAN.SCORE
+  /SCATTERPLOT=(*ZRESID ,*ZPRED) (*ZRESID ,Sbscale.Total.Satisfaction)
+  /RESIDUALS HISTOGRAM(ZRESID) NORMPROB(ZRESID).
+
+
+
+
+SPLIT FILE OFF.
+
+
+CORRELATIONS 
+  /VARIABLES=Sbscale.Total.Satisfaction ELS.Mean.score ALI.TOTAL.MEAN.SCORE TLI.TOTAL.MEAN.SCORE 
+  /PRINT=TWOTAIL NOSIG 
+  /MISSING=PAIRWISE.
+NONPAR CORR
+  /VARIABLES=Sbscale.Total.Satisfaction ELS.Mean.score ALI.TOTAL.MEAN.SCORE TLI.TOTAL.MEAN.SCORE
+  /PRINT=SPEARMAN TWOTAIL NOSIG
+  /MISSING=PAIRWISE.
+CORRELATIONS
+  /VARIABLES=Sbscale.Total.Satisfaction ELS.Mean.score ALI2.TOTAL.MEAN.SCORE TLI.TOTAL.MEAN.SCORE
+  /PRINT=TWOTAIL NOSIG
+  /MISSING=PAIRWISE.
+NONPAR CORR
+  /VARIABLES=Sbscale.Total.Satisfaction ELS.Mean.score ALI2.TOTAL.MEAN.SCORE TLI.TOTAL.MEAN.SCORE
+  /PRINT=SPEARMAN TWOTAIL NOSIG
+  /MISSING=PAIRWISE.
+
+
+
+
+
+
+
+
+SORT CASES  BY Poiotita.Dedomenon. 
+SPLIT FILE SEPARATE BY Poiotita.Dedomenon.
+CORRELATIONS 
+  /VARIABLES=Sbscale.Total.Satisfaction ELS.Mean.score ALI.TOTAL.MEAN.SCORE TLI.TOTAL.MEAN.SCORE 
+  /PRINT=TWOTAIL NOSIG 
+  /MISSING=PAIRWISE.
+NONPAR CORR
+  /VARIABLES=Sbscale.Total.Satisfaction ELS.Mean.score ALI.TOTAL.MEAN.SCORE TLI.TOTAL.MEAN.SCORE
+  /PRINT=SPEARMAN TWOTAIL NOSIG
+  /MISSING=PAIRWISE.
+CORRELATIONS
+  /VARIABLES=Sbscale.Total.Satisfaction ELS.Mean.score ALI2.TOTAL.MEAN.SCORE TLI.TOTAL.MEAN.SCORE
+  /PRINT=TWOTAIL NOSIG
+  /MISSING=PAIRWISE.
+NONPAR CORR
+  /VARIABLES=Sbscale.Total.Satisfaction ELS.Mean.score ALI2.TOTAL.MEAN.SCORE TLI.TOTAL.MEAN.SCORE
+  /PRINT=SPEARMAN TWOTAIL NOSIG
+  /MISSING=PAIRWISE.
+SPLIT FILE OFF.

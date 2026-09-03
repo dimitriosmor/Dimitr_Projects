@@ -17,6 +17,6 @@ Projects
 
     R Analysis: Statistical modeling and analysis projects from my freelance work.
 
-    Tableau Dashboard: Interactive visualizations on [Dataset Name]. 
+    Tableau Dashboard: Interactive visualizations on Earthquakes. 
 
     Python Translation: R to Python translations.
